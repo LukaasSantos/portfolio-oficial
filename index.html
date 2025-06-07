@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="color-scheme" content="dark light">
+    <meta name="description" content="DEV - Lucas Santos">
+    <meta name="author" content="Lucas Santos">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="1 day">
+    <meta name="language" content="Portuguese">
+
+    <meta property="og:title" content="Lucas Santos | DEV">
+    <meta property="og:site_name" content="Portfolio">
+    <meta property="og:description" content="Portfolio - Lucas Santos">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/assets/img/notion-face.png">
+
+
+    <title>Lucas Santos | DEV</title>
+    <link rel="shortcut icon" href="/assets/img/notion-face.png" type="image/x-icon">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:wght@300;400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">   
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <!-- aos css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <!-- css -->
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+    <header class="headerMobile">
+        <nav class="navbarMobile">
+            <div class="d-flex flex-row gap-2">
+                <img src="/assets/img/notion-face.png" style="width: 20%; border-radius: 50%;"  alt="">
+                <div>
+                    <h3 style="margin: 0;">Lucas Santos</h3>
+                    <p class="" style="font-weight: bold; color: var(--primary-100);">Front-End | UX UI</p>
+                </div>
+            </div>
+            <img src="/assets/img/icons/header/menu.svg" alt="">
+        </nav>
+    </header>
+    <main>
+        <header class="headerDesktop">
+            <nav class="navBarDesktop">
+                <ul class="ulMenu animate__animated animate__fadeInLeft">
+                    <li class="liMenu" data-value="Home"><a class="aMenu imgMenuHome" href="#home" alt="home"><img alt="home"></a></li>
+                    <li class="liMenu" data-value="Serviços"><a class="aMenu imgMenuServicos" href="#servicos"></a></li>
+                    <li class="liMenu" data-value="Formações"><a class="aMenu imgMenuFormacoes" href="#formacoes"></a></li>
+                    <li class="liMenu" data-value="Experiências"><a class="aMenu imgMenuExperiencia" href="#experiencias"></a></li>
+                    <li class="liMenu" data-value="Portfolio"><a class="aMenu imgMenuPortfolio" href="#portfolio"></a></li>
+                    <li class="liMenu" data-value="Contato"><a class="aMenu imgMenuContato" href="#contato"></a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- conteudo principal -->
+        <section id="home" class="sessaoPrincipal animate__animated animate__fadeIn">
+            <div class="divApresentacao">
+                <div class="d-flex flex-row w-100">
+                    <div class="divTitulosApresentacao cardItem" style="box-shadow: 0px 0px 0px 0px;">
+                        <h1 class="tituloPrincipalApresentacao bold">Eu sou o <span class="colorPrimary">Lucas Santos</span></h1>
+                        <h1 class="tituloPrincipalApresentacao bold"><span class="colorPrimary">Front-End</span> e <span class="colorPrimary">UX UI</span> Developer</h1>
+                    </div>
+                    <div class="divTriangulo">
+                </div>
+
+                </div>
+                <img src="/assets/img/notion-face-transparent.png" alt="caricatura de Lucas Santos" style="width: 350px; height: 350px;">
+            </div>
+
+            <!-- meus servicos -->
+            <div data-aos="zoom-in-up">
+                <div id="servicos" class="divTitulo">
+                    <h3 class="tituloPrincipal">Meus Serviços</h3>
+                    <p class="subtituloPrincipal colorSubtitulo">Os principais serviços que ofereço</p>
+                </div>
+                <div  class="divServicos">
+                    <div class="cardItem cardWeb">
+                        <img src="/assets/img/icons/coding-lightpurple.svg" alt="monitor com codigo" class="imgServicos imgWeb">
+                        <div class="divTitulo" style="padding: 1rem;">
+                            <h3 class="tituloPrincipal">Desenvolvimento Web</h3>    
+                            <p class="subtituloPrincipal colorSubtitulo">e-commerce, Sistemas internos, Landing Pages, etc..</p>
+                        </div>
+                    </div>
+                    <div class="cardItem cardDesign">
+                        <img src="/assets/img/icons/illustration-lightpurple.svg" alt="monitor com codigo" class="imgServicos imgDesign">
+                        <div class="divTitulo" style="padding: 1rem;">
+                            <h3 class="tituloPrincipal">UI/UX design</h3>    
+                            <p class="subtituloPrincipal colorSubtitulo">Aplicativos Mobile, website design, Design Patterns e systems, etc..</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- minhas formacoes -->
+            <div id="formacoes" data-aos="zoom-in-up" class="divTitulo">
+                <h3 class="tituloPrincipal">Minhas Formações</h3>
+                <p class="subtituloPrincipal colorSubtitulo">Possuo graduações e diversos cursos</p>
+            </div>
+            <div data-aos="zoom-in-up" class="divFormacoes">
+                <div class="cardItem">
+                    <div class="divTitulo" style="padding: 0.5rem;">
+                        <h3 class="tituloPrincipal">ETEC Dr Celso Giglio</h3> 
+                        <p class="timeCard">Fev 2018 - dez 2020</p>   
+                    </div>
+                    <p class="paragrafoPrincipal colorSubtitulo">Tecnólogo em Informática</p>
+                </div>
+                <div class="cardItem">
+                    <div class="divTitulo" style="padding: 0.5rem;">
+                        <h3 class="tituloPrincipal">Universidade Cruzeiro do Sul</h3> 
+                        <p class="timeCard">Fev 2022 - dez 2023</p>   
+                    </div>
+                    <p class="paragrafoPrincipal colorSubtitulo">Superior em Análise e Desenvolvimento de Sistemas</p>
+                </div>
+                <div class="cardItem">
+                    <div class="divTitulo" style="padding: 0.5rem;">
+                        <h3 class="tituloPrincipal">Alura</h3> 
+                        <p class="timeCard">Dez 2023 - Mai 2024</p>   
+                    </div>
+                    <p class="paragrafoPrincipal colorSubtitulo">Desenvolvedor Front-end</p>
+                </div>
+                <div class="cardItem">
+                    <div class="divTitulo" style="padding: 0.5rem;">
+                        <h3 class="tituloPrincipal">Alura</h3> 
+                        <p class="timeCard">Dez 2023 - Mai 2024</p>   
+                    </div>
+                    <p class="paragrafoPrincipal colorSubtitulo">UI UX Designer</p>
+                </div>
+
+
+
+            </div>
+
+            <!-- div ondas -->
+            <div class="custom-shape-divider-bottom-1749230588">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" class="shape-fill"></path>
+                    <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5" class="shape-fill"></path>
+                    <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" class="shape-fill"></path>
+                </svg>
+            </div>
+
+            <div style="background-color: light-dark(var(--color-wheat), var(--dark-mode-tertiary)); margin: -1rem;">
+                
+                <!-- minhas experiencias -->
+                <div id="experiencias" data-aos="zoom-in-up" class="divTitulo">
+                    <h3 class="tituloPrincipal">Minhas Experiências</h3>
+                    <p class="subtituloPrincipal colorSubtitulo">Possuo experiência na área e interesse em criar cada vez mais networks</p>
+                </div>
+                <div data-aos="zoom-in-up" class="divExperiencias">
+                    <div class="cardItem">
+                        <div class="divTitulo" style="padding: 0rem;">
+                            <h3 class="tituloPrincipal">Uspery</h3> 
+                            <p class="timeCard">set 2024 - atualmente</p>   
+                        </div>
+                        <p class="subtituloPrincipal">Desenvolvedor Front-End Junior e UI UX Designer</p>
+                    </div>
+                </div>
+
+                <!-- portfolio -->
+                <div id="portfolio" data-aos="zoom-in-up" class="divTitulo">
+                    <h3 class="tituloPrincipal">Meu Portfólio</h3>
+                    <p class="subtituloPrincipal colorSubtitulo">Meus principais Projetos</p>
+                </div>
+                <div class="swiperCateg">
+                    <nav data-aos="zoom-in-up" class="navSessoes swiper-wrapper">
+                        <p class="swiper-slide" id="categAll">Todas as categorias</p>
+                        <p class="swiper-slide" id="categWeb">Web Aplications</p>
+                        <p class="swiper-slide" id="categMobile">Mobile Design</p>
+                        <p class="swiper-slide" id="categUI">UI Design</p>
+                    </nav>
+                </div>
+                <div class="swiper">
+                    <div data-aos="" class="divProjetos swiper-wrapper">
+
+                        <div class="cardProjetos swiper-slide categWeb">
+                            <img class="imgProjetos" src="/assets/img/icons/default.svg" alt="projeto vazio">
+                            <p>Projeto Tal</p>
+                        </div>
+                        <div class="cardProjetos swiper-slide categWeb">
+                            <img class="imgProjetos" src="/assets/img/icons/default.svg" alt="projeto vazio">
+                            <p>Projeto Tal</p>
+                        </div>
+                        <div class="cardProjetos swiper-slide categWeb">
+                            <img class="imgProjetos" src="/assets/img/icons/default.svg" alt="projeto vazio">
+                            <p>Projeto Tal</p>
+                        </div>
+
+                        <div class="cardProjetos swiper-slide categMobile">
+                            <img class="imgProjetos" src="/assets/img/icons/default.svg" alt="projeto vazio">
+                            <p>Projeto Tal</p>
+                        </div>
+                        <div class="cardProjetos swiper-slide categMobile">
+                            <img class="imgProjetos" src="/assets/img/icons/default.svg" alt="projeto vazio">
+                            <p>Projeto Tal</p>
+                        </div>
+                        <div class="cardProjetos swiper-slide categMobile">
+                            <img class="imgProjetos" src="/assets/img/icons/default.svg" alt="projeto vazio">
+                            <p>Projeto Tal</p>
+                        </div>
+
+                        <div class="cardProjetos swiper-slide categUI">
+                            <img class="imgProjetos" src="/assets/img/icons/default.svg" alt="projeto vazio">
+                            <p>Projeto Tal</p>
+                        </div>
+                        <div class="cardProjetos swiper-slide categUI">
+                            <img class="imgProjetos" src="/assets/img/icons/default.svg" alt="projeto vazio">
+                            <p>Projeto Tal</p>
+                        </div>
+                        <div class="cardProjetos swiper-slide categUI">
+                            <img class="imgProjetos" src="/assets/img/icons/default.svg" alt="projeto vazio">
+                            <p>Projeto Tal</p>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-button-prev colorSecundary"></div>
+                    <div class="swiper-button-next colorSecundary"></div>
+
+                    <div class="swiper-pagination colorSecundary"></div>
+                </div>
+
+                <ul data-aos="zoom-in-up" class="ulLogos">
+                    <li><img src="/assets/img/icons/defaultMini.svg" alt=""></li>
+                    <li><img src="/assets/img/icons/defaultMini.svg" alt=""></li>
+                    <li><img src="/assets/img/icons/defaultMini.svg" alt=""></li>
+                </ul>
+
+                <!-- Entre em contato -->
+                <div data-aos="zoom-in-up" id="contato" class="divTitulo ">
+                    <h3 class="tituloPrincipal">Entre em Contato</h3>
+                    <p class="subtituloPrincipal colorSubtitulo">Envie uma mensagem para mim</p>
+                </div>
+                <form data-aos="zoom-in-up" action="" class="cardItem formContato">
+
+                    <div class="floating-label" >
+                        <input type="text" id="nome" placeholder="">
+                        <label for="nome">Nome Completo</label>
+                    </div>
+                    <div class="floating-label">
+                        <input type="text" id="email" placeholder=" ">
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="floating-label">
+                        <input type="text" id="assunto" placeholder=" ">
+                        <label for="assunto">Assunto</label>
+                    </div>
+                    <div class="floating-label">
+                        <textarea id="mensagem" placeholder=" " style="height: 10rem;" rows="12"></textarea>
+                        <label for="mensagem">Sua Mensagem</label>
+                    </div>
+                    <button class="btnAcessar" type="submit">Enviar</button>
+                </form>
+            </div>
+
+        </section>
+
+        <!-- aside barra lateral -->
+        <aside class="cardItem asideMenuLateral">
+            <div class="d-flex flex-column align-items-center animate__animated animate__fadeInUp" style="gap: 1rem;">
+                <!-- perfil -->
+                <img class="imgPerfil" src="/assets/img/perfil.jpg" alt="perfil">
+                <p class="subtituloPrincipal colorSubtitulo">Busco sempre a otimização. Procurando melhorar habilidades interpessoais e profissionais para um resultado proativo.</p>
+                <ul class="navMenuSocial">
+                    <li class="navCardSocial"><img src="/assets/img/icons/social/whats.svg" alt="whatsapp"></li>
+                    <li class="navCardSocial"><img src="/assets/img/icons/social/instagram.svg" alt="instagram"></li>
+                    <li class="navCardSocial"><img src="/assets/img/icons/social/github.svg" alt="github"></li>
+                    <li class="navCardSocial"><img src="/assets/img/icons/social/linkedin.svg" alt="linkedin"></li>
+                    <li class="navCardSocial"><img src="/assets/img/icons/social/email.svg" alt="email"></li>
+                    <li class="navCardSocial"><img src="/assets/img/icons/social/dribbble.svg" alt="dibbble"></li>
+                </ul>
+                <div class="d-flex flex-column align-items-center text-center">
+                    <h3 class="tituloCard">Lucas Santos</h3>
+                    <p class="subtituloPrincipal colorSubtitulo">Desenvolvedor Front-End</p>
+                    <p class="subtituloPrincipal colorSubtitulo">UI e UX Designer</p>
+                </div>
+                <hr class="hr-primary">
+
+                <!-- sobre mim -->
+                <div class="divSobreMim">
+                    <h3 class="tituloCard m-3 bold" style="font-size: 1.25rem;">Sobre Mim</h3>
+                    <div class="menuSobreMim">
+                        <div class="itemSobreMim">
+                            <p class="subItemSobreMim">Idade:</p>
+                            <p class="colorSubtitulo thin" id="idadeLucas">22</p>
+                        </div>
+                        <div class="itemSobreMim">
+                            <p class="subItemSobreMim">Email:</p>
+                            <p class="colorSubtitulo thin">lucas.tas@live.com</p>
+                        </div>
+                        <div class="itemSobreMim">
+                            <p class="subItemSobreMim">Telefone:</p>
+                            <p class="colorSubtitulo thin">(11) 9 9725-2646</p>
+                        </div>
+                        <div class="itemSobreMim">
+                            <p class="subItemSobreMim">Freelance:</p>
+                            <p class="bold" style="color: green;">Disponível</p>
+                        </div>
+                        <div class="itemSobreMim">
+                            <p class="subItemSobreMim">Endereço:</p>
+                            <p class="colorSubtitulo thin">Osasco, SP</p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="hr-primary">
+
+                <!-- habilidades -->
+                <div class="progressContainer">
+                    <h3 class="tituloCard bold">Habilidades</h3>
+                    <div class="d-flex flex-column gap-3">
+                        <div>
+                            <div class="divProgressLabel">
+                                <span class="paragrafoPrincipal colorSubtitulo">HTML</span>
+                                <span class="paragrafoPrincipal colorSubtitulo">95%</span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Exemplo de progresso" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar progress-bar-custom" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="divProgressLabel">
+                                <span class="paragrafoPrincipal colorSubtitulo">CSS</span>
+                                <span class="paragrafoPrincipal colorSubtitulo">95%</span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Exemplo de progresso" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar progress-bar-custom" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="divProgressLabel">
+                                <span class="paragrafoPrincipal colorSubtitulo">JS</span>
+                                <span class="paragrafoPrincipal colorSubtitulo">80%</span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Exemplo de progresso" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar progress-bar-custom" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="divProgressLabel">
+                                <span class="paragrafoPrincipal colorSubtitulo">React</span>
+                                <span class="paragrafoPrincipal colorSubtitulo">20%</span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Exemplo de progresso" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar progress-bar-custom" style="width: 20%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="divProgressLabel">
+                                <span class="paragrafoPrincipal colorSubtitulo">Vue.js</span>
+                                <span class="paragrafoPrincipal colorSubtitulo">20%</span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Exemplo de progresso" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar progress-bar-custom" style="width: 20%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="divProgressLabel">
+                                <span class="paragrafoPrincipal colorSubtitulo">PHP</span>
+                                <span class="paragrafoPrincipal colorSubtitulo">35%</span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Exemplo de progresso" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar progress-bar-custom" style="width: 35%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="divProgressLabel">
+                                <span class="paragrafoPrincipal colorSubtitulo">Node.js</span>
+                                <span class="paragrafoPrincipal colorSubtitulo">30%</span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Exemplo de progresso" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar progress-bar-custom" style="width: 30%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="divProgressLabel">
+                                <span class="paragrafoPrincipal colorSubtitulo">Figma</span>
+                                <span class="paragrafoPrincipal colorSubtitulo">80%</span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Exemplo de progresso" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar progress-bar-custom" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr class="hr-primary">
+
+                <!-- conhecimentos -->
+                <div class="divConhecimento">
+                    <h3 class="tituloCard bold">Conhecimentos</h3>
+                    <ul class="ul-conhecimentos">
+                        <li class="paragrafoPrincipal thin"><img src="/assets/img/icons/conhecimento.svg" alt="" style="margin-right: 10px;">Bootstrap, Materialize, Tailwind</li>
+                        <li class="paragrafoPrincipal thin"><img src="/assets/img/icons/conhecimento.svg" alt="" style="margin-right: 10px;">SEO, SOLID</li>
+                        <li class="paragrafoPrincipal thin"><img src="/assets/img/icons/conhecimento.svg" alt="" style="margin-right: 10px;">Git, GitHub</li>
+                    </ul>
+                </div>
+                <hr class="hr-primary">
+
+                <!-- linguagens -->
+                <div class="progressContainer">
+                    <h3 class="tituloCard bold">Linguagens</h3>
+                    <div class="d-flex flex-column gap-3">
+                        <div>
+                            <div class="divProgressLabel">
+                                <span class="paragrafoPrincipal colorSubtitulo">Português</span>
+                                <span class="paragrafoPrincipal colorSubtitulo">95%</span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Exemplo de progresso" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar progress-bar-custom" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="divProgressLabel">
+                                <span class="paragrafoPrincipal colorSubtitulo">Inglês</span>
+                                <span class="paragrafoPrincipal colorSubtitulo">60%</span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Exemplo de progresso" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar progress-bar-custom" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="btnAcessar" onclick="window.open('/assets/pdf/cv_lucas_santos.pdf', '_blank')">Download CV <img src="/assets/img/icons/download.svg" alt=""></button>
+            </div>
+        </div>
+
+        </aside>
+
+    </main>
+    <footer>
+        <div class="cardItem">
+            <p>Copyright © Lucas Santos 2025</p>
+        </div>
+    </footer>
+
+    <!-- bootstrap e popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>    <script src="/assets/js/main.js"></script>
+    
+    <!-- tippy -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    
+    <!-- aos -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- swiper -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <script src="/assets/js/main.js" type="module"></script>
+
+
+</body>
+</html>
