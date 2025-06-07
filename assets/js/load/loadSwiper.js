@@ -23,25 +23,12 @@ export function loadSwiper() {
     });
 
     const swiperCategorias = new Swiper('.swiperCateg', {
-        effect: "coverflow",
-        grabCursor: true,
         centeredSlides: true,
         slidesPerView: "auto",
-        coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: true,
-        grabCursor: true,
-        },
-
     });
     swiperCategorias.on('slideChange', function (e) {
         const slideAtual = e.slides[e.activeIndex] || 0;
         trocaCategoria(slideAtual.id, e.activeIndex);
-        swiper.update();
-        
     });
     
     function trocaCategoria(id, index) {
@@ -54,11 +41,6 @@ export function loadSwiper() {
             })
         } else {
             switch (id) {
-                case "cardProjetos":
-                    projetos.forEach(projeto => {
-                        projeto.remove("hidden")
-                    })
-                    break;
                 case "categWeb":
                     projetos.forEach(projeto => {
                         projeto.classList.contains("categWeb") ? projeto.classList.remove("hidden") : projeto.classList.add("hidden");
@@ -77,5 +59,14 @@ export function loadSwiper() {
                     break;
             }
         }
+        swiper.update();
+        requestAnimationFrame(() => {
+        // Um segundo requestAnimationFrame pode ser necessário em alguns navegadores/condições
+        // para garantir que o reflow completo ocorra
+        requestAnimationFrame(() => {
+            swiper.update(); // Recalcula o Swiper dos projetos
+            swiper.slideTo(0); // Opcional: Voltar ao primeiro slide após a filtragem
+        });
+    });
     }
 }

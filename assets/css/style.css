@@ -203,9 +203,9 @@ li {
     color: var(--subtitulo-color);
 }
 
-.hidden {
+/* .hidden {
     display: none;
-}
+} */
 
 
 /* floating label */
@@ -249,7 +249,7 @@ li {
 /* header */
 .headerMobile {
     position: fixed; /* Fixa o header no topo */
-    width: 100%;
+    width: 100vw;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -261,8 +261,6 @@ li {
 }
 
 .navbarMobile {
-
-
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -270,11 +268,12 @@ li {
     padding: 1rem;
     background-color: light-dark(var(--color-white), var(--dark-mode-secundary));
     color: light-dark(var(--color-black), var(--color-white));
-    box-shadow: 0px 1px 1px rgba(3, 7, 18, 0.02),
-    0px 5px 4px rgba(3, 7, 18, 0.04),
-    0px 12px 10px rgba(3, 7, 18, 0.05),
-    0px 20px 17px rgba(3, 7, 18, 0.07),
-    0px 32px 27px rgba(3, 7, 18, 0.09);}
+    background: light-dark(rgba( 255, 255, 255, 0.5 ),rgba(75, 75, 75, 0.5));
+    box-shadow: 0 8px 32px 0 rgba(55, 56, 69, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border: 1px solid light-dark(rgba( 255, 255, 255, 0.5 ),rgba(75, 75, 75, 0.5)); 
+}
 
 .navBarDesktop {
     display: none;
@@ -342,12 +341,57 @@ li {
     height: 300px;
 }
 
+.divLogos {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 20px 0;
+}
+
 .ulLogos {
     display: flex;
     flex-direction: row;
     margin: 1rem 0;
     justify-content: center;
     gap: 1rem;
+    padding: 0;
+    margin: 0;
+    width: max-content;
+
+    /* Animação */
+    animation: scroll-logos 20s linear infinite; /* Nome, duração, tipo, repetição */
+
+}
+
+/* Pausar a animação no hover */
+.ulLogos:hover {
+    animation-play-state: paused;
+}
+
+
+/* Estilos para cada item da lista (cada logo) */
+.ulLogos li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px; 
+    flex-shrink: 0;
+}
+
+
+.imgLogos {
+    width: 250px;
+    height: 250px;
+
+    filter: light-dark(grayscale(100%), grayscale(0%)); /* Exemplo: logos cinza no light, coloridos no dark */
+    opacity: 0.7; /* Suaviza um pouco o logo */
+    transition: all 0.3s ease-in-out; /* Transição para o hover */
+}
+
+.ulLogos li:hover .imgLogos {
+    opacity: 1; /* Fica totalmente visível no hover */
+    filter: none; /* Remove o filtro de cinza no hover */
+    transform: scale(1.05); /* Pequeno zoom no hover */
 }
 
 
@@ -703,4 +747,15 @@ li {
 
 }
 
-
+/* Definição da Animação */
+@keyframes scroll-logos {
+    from {
+        transform: translateX(0); /* Começa na posição normal */
+    }
+    to {
+        /* Move a lista para a esquerda pela largura do conjunto original de logos.
+           Como duplicamos o conteúdo, -50% do total da ulLogos vai mover o primeiro conjunto para fora da vista,
+           revelando o segundo conjunto e criando o loop. */
+        transform: translateX(-50%);
+    }
+}
