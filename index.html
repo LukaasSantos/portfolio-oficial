@@ -43,7 +43,7 @@
     <!-- css -->
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
-<body>
+<body id="home">
     <header class="headerMobile">
         <nav class="navbarMobile">
             <div class="d-flex flex-row gap-2">
@@ -53,10 +53,18 @@
                     <p class="" style="font-weight: bold; color: light-dark(var(--primary-100), var(--color-white));">Front-End | UX UI</p>
                 </div>
             </div>
-            <img src="/assets/img/icons/header/menu.svg" alt="">
+            <img id="btnMenu" src="/assets/img/icons/header/menu.svg" alt="">
         </nav>
+        <ul class="ulMenuMobile menuHidden">
+            <li><a class="aMenu" style="text-decoration: none; color: white;" href="#home">Home</a></li>
+            <li><a class="aMenu" style="text-decoration: none; color: white;" href="#servicos">Serviços</a></li>
+            <li><a class="aMenu" style="text-decoration: none; color: white;" href="#formacoes">Formações</a></li>
+            <li><a class="aMenu" style="text-decoration: none; color: white;" href="#experiencias">Experiências</a></li>
+            <li><a class="aMenu" style="text-decoration: none; color: white;" href="#portfolio">Portfólio</a></li>
+            <li><a class="aMenu" style="text-decoration: none; color: white;" href="#contato">Contato</a></li>
+        </ul>
     </header>
-    <main>
+    <main >
         <header class="headerDesktop">
             <nav class="navBarDesktop">
                 <ul class="ulMenu animate__animated animate__fadeInLeft">
