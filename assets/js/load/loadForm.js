@@ -7,13 +7,18 @@ export function loadForm() {
         const mensagem = document.getElementById('mensagem').value;
 
         try {
+            // debugger
+
             const response = await fetch('/api/formContato.js', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ nome, email, mensagem })
             });
 
+            console.log(response);
             const data = await response.json();
+            console.log(data);
+
             if (data.success) {
                 alert("Formulario enviado com sucesso!");
             } 
