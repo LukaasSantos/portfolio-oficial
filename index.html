@@ -264,25 +264,21 @@
                     <h3 class="tituloPrincipal">Entre em Contato</h3>
                     <p class="subtituloPrincipal colorSubtitulo">Envie uma mensagem para mim</p>
                 </div>
-                <form data-aos="zoom-in-up" action="" class="cardItem formContato">
+                <form id="formContato" method="POST" data-aos="zoom-in-up" action="" class="cardItem formContato">
 
                     <div class="floating-label" >
-                        <input type="text" id="nome" placeholder="">
+                        <input type="text" id="nome" placeholder="" required>
                         <label for="nome">Nome Completo</label>
                     </div>
                     <div class="floating-label">
-                        <input type="text" id="email" placeholder=" ">
+                        <input type="email" id="email" placeholder="" required>
                         <label for="email">Email</label>
-                    </div>
-                    <div class="floating-label">
-                        <input type="text" id="assunto" placeholder=" ">
-                        <label for="assunto">Assunto</label>
                     </div>
                     <div class="floating-label">
                         <textarea id="mensagem" placeholder=" " style="height: 10rem;" rows="12"></textarea>
                         <label for="mensagem">Sua Mensagem</label>
                     </div>
-                    <button class="btnAcessar" type="submit">Enviar</button>
+                    <button id="btnEnviarForm" class="btnAcessar" type="submit">Enviar</button>
                 </form>
             </div>
 
