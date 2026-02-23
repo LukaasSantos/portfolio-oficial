@@ -4,6 +4,7 @@ import { loadAOS } from '/assets/js/load/loadAOS.js';
 import { loadSwiper } from '/assets/js/load/loadSwiper.js';
 import { loadSwitchMenu } from '/assets/js/load/loadSwitchMenu.js';
 import { loadForm } from '/assets/js/load/loadForm.js';
+import { attAge } from '/assets/js/functions/attAge.js';
 
 document.addEventListener('DOMContentLoaded', function() {
     // loads
@@ -13,4 +14,5 @@ document.addEventListener('DOMContentLoaded', function() {
     loadSwiper();
     loadSwitchMenu();
     loadForm();
+    attAge();
 });
