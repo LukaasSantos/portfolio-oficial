@@ -360,9 +360,20 @@ li {
     width: fit-content;
 }
 
+.cardProjetos {
+    border-radius: 12px;
+    padding: 10px;
+}
+
+.cardProjetos:hover {
+    scale: 1.05;
+    transition: 1s;
+}
+
 .imgProjetos {
     width: 300px;
     height: 300px;
+    border-radius: 12px;
 }
 
 .divLogos {
