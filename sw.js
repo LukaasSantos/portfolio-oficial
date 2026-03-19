@@ -1,4 +1,4 @@
-const CACHE_NAME = 'lucas-santos-v1';
+const CACHE_NAME = 'lucas-santos-v2';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -7,7 +7,9 @@ const urlsToCache = [
   '/assets/img/notion-face.png',
   '/assets/img/notion-face-transparent.png',
   '/assets/img/perfil.jpg',
-  '/assets/pdf/cv_lucas_santos.pdf'
+  '/assets/pdf/cv_lucas_santos.pdf',
+  'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap',
+  'https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap-grid.min.css'
 ];
 
 // Install event - cache resources
