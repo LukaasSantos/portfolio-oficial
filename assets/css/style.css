@@ -57,6 +57,10 @@ li {
     list-style-type: none;
 }
 
+strong {
+    font-weight: bold;
+}
+
 /* swiper */
 .swiper-pagination-bullet-active {
     color: var(--secundary-100) !important;
@@ -154,7 +158,15 @@ li {
     font-size: var(--subtituloPrincipal-size);
 }
 
+.ul-conhecimentos {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
 .paragrafoPrincipal {
+    display: flex;
+    flex-direction: column;
     font-size: var(--paragrafo-size);
 }
 

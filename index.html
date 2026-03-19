@@ -47,7 +47,7 @@
     <header class="headerMobile">
         <nav class="navbarMobile">
             <div class="d-flex flex-row gap-2">
-                <img src="/assets/img/notion-face.png" style="width: 20%; border-radius: 50%;"  alt="">
+                <img fetchpriority="high" src="/assets/img/notion-face.png" style="width: 20%; border-radius: 50%;"  alt="">
                 <div>
                     <h3 style="margin: 0;">Lucas Santos</h3>
                     <p class="" style="font-weight: bold; color: light-dark(var(--primary-100), var(--color-white));">Front-End | UX UI</p>
@@ -281,7 +281,8 @@
             <div class="d-flex flex-column align-items-center animate__animated animate__fadeInUp" style="gap: 1rem;">
                 <!-- perfil -->
                 <img class="imgPerfil" src="/assets/img/perfil.jpg" alt="perfil">
-                <p class="subtituloPrincipal colorSubtitulo">Busco sempre a otimização. Procurando melhorar habilidades interpessoais e profissionais para um resultado proativo.</p>
+                <p class="subtituloPrincipal colorSubtitulo">
+                    Desenvolvedor Full-Stack com sólida experiência na criação de ecossistemas web de alta performance e interfaces intuitivas. Especialista em JavaScript Vanilla (ES6+) e arquitetura modular, com proficiência em React, Next.js e PHP (Laravel). Pioneiro na adoção de AI-Assisted Coding, utilizando o ecossistema Windsurf (Vibecode) para otimização de fluxos de trabalho, refatoração complexa e aceleração do ciclo de entrega com foco em qualidade. Comprometido com soluções escaláveis que unem design centrado no usuário (UX/UI) a práticas rigorosas de Clean Code (SOLID, DRY).</p>
                 <ul class="navMenuSocial">
                     <li class="navCardSocial"><a href="https://wa.me/5511997252646"><img src="/assets/img/icons/social/whats.svg" alt="whatsapp"></a></li>
                     <li class="navCardSocial"><a href="https://www.instagram.com/_luknhasz_?igsh=Mzl4cmc0dGFlOWwz"><img src="/assets/img/icons/social/instagram.svg" alt="instagram"></a></li>
@@ -292,7 +293,7 @@
                 </ul>
                 <div class="d-flex flex-column align-items-center text-center">
                     <h3 class="tituloCard">Lucas Santos</h3>
-                    <p class="subtituloPrincipal colorSubtitulo">Desenvolvedor Front-End</p>
+                    <p class="subtituloPrincipal colorSubtitulo">Desenvolvedor Full-Stack</p>
                     <p class="subtituloPrincipal colorSubtitulo">UI e UX Designer</p>
                 </div>
                 <hr class="hr-primary">
@@ -358,6 +359,15 @@
                         </div>
                         <div>
                             <div class="divProgressLabel">
+                                <span class="paragrafoPrincipal colorSubtitulo">TypeScript</span>
+                                <span class="paragrafoPrincipal colorSubtitulo">50%</span>
+                            </div>
+                            <div class="progress" role="progressbar" aria-label="Exemplo de progresso" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                <div class="progress-bar progress-bar-custom" style="width: 50%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="divProgressLabel">
                                 <span class="paragrafoPrincipal colorSubtitulo">React</span>
                                 <span class="paragrafoPrincipal colorSubtitulo">80%</span>
                             </div>
@@ -418,13 +428,13 @@
                 <div class="divConhecimento">
                     <h3 class="tituloCard bold">Conhecimentos</h3>
                     <ul class="ul-conhecimentos">
-                        <li class="paragrafoPrincipal thin"><img src="/assets/img/icons/conhecimento.svg" alt="" style="margin-right: 10px;">Bootstrap, Materialize, Tailwind CSS</li>
-                        <li class="paragrafoPrincipal thin"><img src="/assets/img/icons/conhecimento.svg" alt="" style="margin-right: 10px;">SPA, Modules, Components, Routing, State Management, PWA</li>
-                        <li class="paragrafoPrincipal thin"><img src="/assets/img/icons/conhecimento.svg" alt="" style="margin-right: 10px;">Metodologias Ágeis (SCRUM, Kanban)</li>
-                        <li class="paragrafoPrincipal thin"><img src="/assets/img/icons/conhecimento.svg" alt="" style="margin-right: 10px;">SOLID, KISS, DRY</li>
-                        <li class="paragrafoPrincipal thin"><img src="/assets/img/icons/conhecimento.svg" alt="" style="margin-right: 10px;">Git, GitHub, SEO</li>
-                        <li class="paragrafoPrincipal thin"><img src="/assets/img/icons/conhecimento.svg" alt="" style="margin-right: 10px;">Node.js, Vite</li>
-                        <li class="paragrafoPrincipal thin"><img src="/assets/img/icons/conhecimento.svg" alt="" style="margin-right: 10px;">PHP</li>
+                        <li class="paragrafoPrincipal thin"><div><img src="/assets/img/icons/conhecimento.svg" alt="" style="margin-right: 10px;"><strong>Front-End:</strong> JavaScript (ES6+), TypeScript, React, Next.js, Vue.js, HTML5, CSS3.</div></li>
+                        <li class="paragrafoPrincipal thin"><div><img src="/assets/img/icons/conhecimento.svg" alt="" style="margin-right: 10px;">SPA, Modules, Components, Routing, State Management, PWA</div></li>
+                        <li class="paragrafoPrincipal thin"><div><img src="/assets/img/icons/conhecimento.svg" alt="" style="margin-right: 10px;"><strong>Estilização & UI:</strong> Tailwind CSS, Bootstrap, Materialize, Design Responsivo, Figma (UX/UI).</div></li>
+                        <li class="paragrafoPrincipal thin"><div><img src="/assets/img/icons/conhecimento.svg" alt="" style="margin-right: 10px;"><strong>Back-End:</strong> PHP, Laravel, Node.js, REST APIs.</div></li>
+                        <li class="paragrafoPrincipal thin"><div><img src="/assets/img/icons/conhecimento.svg" alt="" style="margin-right: 10px;"><strong>Arquitetura & Ferramentas:</strong> SOLID, KISS, DRY, Padrões de Projeto, Git/GitHub, Vite, SEO.</div></li>
+                        <li class="paragrafoPrincipal thin"><div><img src="/assets/img/icons/conhecimento.svg" alt="" style="margin-right: 10px;"><strong>Metodologias:</strong> Scrum, Kanban, Gerenciamento de Projetos Ágeis.</div></li>
+                        <li class="paragrafoPrincipal thin"><div><img src="/assets/img/icons/conhecimento.svg" alt="" style="margin-right: 10px;"><strong>Ferramentas de IA:</strong> Windsurf (Vibecode), AI-Assisted Coding, Prompt Engineering para desenvolvimento de software.</div></li>
                     </ul>
                 </div>
                 <hr class="hr-primary">
