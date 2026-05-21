@@ -118,9 +118,9 @@
                 <ul class="ulMenu animate__animated animate__fadeInLeft">
                     <li class="liMenu" data-value="Home"><a class="aMenu imgMenuHome" href="#home" aria-label="Ir para seção home"><img alt="home"></a></li>
                     <li class="liMenu" data-value="Serviços"><a class="aMenu imgMenuServicos" href="#servicos"></a></li>
-                    <li class="liMenu" data-value="Formações"><a class="aMenu imgMenuFormacoes" href="#formacoes"></a></li>
-                    <li class="liMenu" data-value="Experiências"><a class="aMenu imgMenuExperiencia" href="#experiencias"></a></li>
                     <li class="liMenu" data-value="Portfolio"><a class="aMenu imgMenuPortfolio" href="#portfolio"></a></li>
+                    <li class="liMenu" data-value="Experiências"><a class="aMenu imgMenuExperiencia" href="#experiencias"></a></li>
+                    <li class="liMenu" data-value="Formações"><a class="aMenu imgMenuFormacoes" href="#formacoes"></a></li>
                     <li class="liMenu" data-value="Contato"><a class="aMenu imgMenuContato" href="#contato"></a></li>
                 </ul>
             </nav>
@@ -165,44 +165,73 @@
                 </div>
             </div>
 
-            <!-- minhas formacoes -->
-            <div id="formacoes" data-aos="zoom-in-up" class="divTitulo" aria-labelledby="titulo-formacoes">
-                <h3 class="tituloPrincipal" id="titulo-formacoes">Minhas Formações</h3>
-                <p class="subtituloPrincipal colorSubtitulo">Possuo graduações e diversos cursos</p>
+            <!-- portfolio -->
+            <div id="portfolio" data-aos="zoom-in-up" class="divTitulo" aria-labelledby="titulo-portfolio">
+                <h3 class="tituloPrincipal" id="titulo-portfolio">Meu Portfólio</h3>
+                <p class="subtituloPrincipal colorSubtitulo">Meus principais Projetos</p>
             </div>
-            <div data-aos="zoom-in-up" class="divFormacoes">
-                <div class="cardItem">
-                    <div class="divTitulo" style="padding: 0.5rem; gap: 1rem;">
-                        <h3 class="tituloPrincipal">ETEC Dr Celso Giglio</h3> 
-                        <p class="timeCard">Fev 2018 - dez 2020</p>   
+            <!-- <div class="swiperCateg">
+                <nav class="navSessoes swiper-wrapper">
+                    <p class="swiper-slide" id="categAll">Todas as categorias</p>
+                    <p class="swiper-slide" id="categWeb">Web Aplications</p>
+                    <p class="swiper-slide" id="categMobile">Mobile Design</p>
+                    <p class="swiper-slide" id="categUI">UI Design</p>
+                </nav>
+            </div> -->
+            <div class="swiper">
+                <div data-aos="zoom-in-up" class=" swiper-wrapper">
+                    <div class="cardProjetos swiper-slide categWeb">
+                        <a href="https://www.korra.net.br/" target="_blank" style="text-decoration: none;">
+                            <img loading="lazy" class="imgProjetos" src="/assets/img/imgPort/korraLogo.svg" alt="Logo do projeto Korra">
+                            <p style="color: white;">Korra | Modern Support Plataform</p>
+                            <p style="font-size: 0.80rem; color: darkgray;">Landing Page e Sistema Interno</p>
+                        </a>
                     </div>
-                    <p class="paragrafoPrincipal colorSubtitulo">Tecnólogo em Informática</p>
-                </div>
-                <div class="cardItem">
-                    <div class="divTitulo" style="padding: 0.5rem; gap: 1rem;">
-                        <h3 class="tituloPrincipal">Universidade Cruzeiro do Sul</h3> 
-                        <p class="timeCard">Fev 2022 - dez 2023</p>   
+                    <div class="cardProjetos swiper-slide categWeb">
+                        <a href="https://criativamentecare.com/" target="_blank" style="text-decoration: none;">
+                            <img loading="lazy" class="imgProjetos" src="/assets/img/imgPort/CriativLogo.svg" alt="Logo do projeto Criativamente Care" style="scale: initial; object-fit: cover;">
+                            <p style="color: white;">Criativamente Care</p>
+                            <p style="font-size: 0.80rem; color: darkgray;">Landing Page e Sistema Interno</p>
+                        </a>
                     </div>
-                    <p class="paragrafoPrincipal colorSubtitulo">Superior em Análise e Desenvolvimento de Sistemas</p>
-                </div>
-                <div class="cardItem">
-                    <div class="divTitulo" style="padding: 0.5rem; gap: 1rem;">
-                        <h3 class="tituloPrincipal">Alura</h3> 
-                        <p class="timeCard">Dez 2023 - Mai 2024</p>   
+                    <div class="cardProjetos swiper-slide categWeb">
+                        <a href="https://finatechcompany.com.br/" target="_blank" style="text-decoration: none;">
+                            <img loading="lazy" class="imgProjetos" src="/assets/img/imgPort/FinatechLogo.svg" alt="Logo do projeto Finatech" style="scale: initial; object-fit: cover;">
+                            <p style="color: white;">Finatech Financiamento</p>
+                            <p style="font-size: 0.80rem; color: darkgray;">Sistema Interno</p>
+                        </a>
                     </div>
-                    <p class="paragrafoPrincipal colorSubtitulo">Desenvolvedor Front-end</p>
-                </div>
-                <div class="cardItem">
-                    <div class="divTitulo" style="padding: 0.5rem; gap: 1rem;">
-                        <h3 class="tituloPrincipal">Alura</h3> 
-                        <p class="timeCard">Dez 2023 - Mai 2024</p>   
+                    <div class="cardProjetos swiper-slide categWeb">
+                        <a href="https://petvida-clinica-veterinaria.vercel.app/" target="_blank" style="text-decoration: none;">
+                            <img loading="lazy" class="imgProjetos" src="/assets/img/imgPort/vetLogo.svg" alt="Logo do projeto petVida" style="scale: initial; object-fit: cover;">
+                            <p style="color: white;">Clinica petVida (protótipo)</p>
+                            <p style="font-size: 0.80rem; color: darkgray;">Landing Page</p>
+                        </a>
                     </div>
-                    <p class="paragrafoPrincipal colorSubtitulo">UI UX Designer</p>
-                </div>
+                    <div class="cardProjetos swiper-slide categWeb">
+                        <a href="https://clinica-odonto-ten.vercel.app/" target="_blank" style="text-decoration: none;">
+                            <img loading="lazy" class="imgProjetos" src="/assets/img/imgPort/odontoLogo.svg" alt="Logo do projeto Sorriso Perfeito" style="scale: initial; object-fit: cover;">
+                            <p style="color: white;">Clinica Sorriso Perfeito (protótipo)</p>
+                            <p style="font-size: 0.80rem; color: darkgray;">Landing Page</p>
+                        </a>
+                    </div>
 
+                    <!-- <div class="cardProjetos swiper-slide categMobile">
+                        <img class="imgProjetos" src="/assets/img/icons/default.svg" alt="projeto vazio">
+                        <p>Projeto Tal</p>
+                    </div>
+                    <div class="cardProjetos swiper-slide categUI">
+                        <img class="imgProjetos" src="/assets/img/icons/default.svg" alt="projeto vazio">
+                        <p>Projeto Tal</p>
+                    </div> -->
+                </div>
+                <div class="swiper-button-prev colorSecundary"></div>
+                <div class="swiper-button-next colorSecundary"></div>
 
-
+                <!-- <div class="swiper-pagination colorSecundary"></div> -->
             </div>
+
+
 
             <!-- div ondas -->
             <div class="custom-shape-divider-bottom-1749230588">
@@ -230,56 +259,41 @@
                     </div>
                 </div>
 
-                <!-- portfolio -->
-                <div id="portfolio" data-aos="zoom-in-up" class="divTitulo" aria-labelledby="titulo-portfolio">
-                    <h3 class="tituloPrincipal" id="titulo-portfolio">Meu Portfólio</h3>
-                    <p class="subtituloPrincipal colorSubtitulo">Meus principais Projetos</p>
+
+                <!-- minhas formacoes -->
+                <div id="formacoes" data-aos="zoom-in-up" class="divTitulo" aria-labelledby="titulo-formacoes">
+                    <h3 class="tituloPrincipal" id="titulo-formacoes">Minhas Formações</h3>
+                    <p class="subtituloPrincipal colorSubtitulo">Possuo graduações e diversos cursos</p>
                 </div>
-                <!-- <div class="swiperCateg">
-                    <nav class="navSessoes swiper-wrapper">
-                        <p class="swiper-slide" id="categAll">Todas as categorias</p>
-                        <p class="swiper-slide" id="categWeb">Web Aplications</p>
-                        <p class="swiper-slide" id="categMobile">Mobile Design</p>
-                        <p class="swiper-slide" id="categUI">UI Design</p>
-                    </nav>
-                </div> -->
-                <div class="swiper">
-                    <div data-aos="zoom-in-up" class=" swiper-wrapper">
-                        <div class="cardProjetos swiper-slide categWeb">
-                            <a href="https://www.korra.net.br/" target="_blank" style="text-decoration: none;">
-                                <img loading="lazy" class="imgProjetos" src="/assets/img/imgPort/korraLogo.svg" alt="Logo do projeto Korra">
-                                <p style="color: white;">Korra | Modern Support Plataform</p>
-                                <p style="font-size: 0.80rem; color: darkgray;">Landing Page e Sistema Interno</p>
-                            </a>
+                <div data-aos="zoom-in-up" class="divFormacoes">
+                    <div class="cardItem">
+                        <div class="divTitulo" style="padding: 0.5rem; gap: 1rem;">
+                            <h3 class="tituloPrincipal">ETEC Dr Celso Giglio</h3> 
+                            <p class="timeCard">Fev 2018 - dez 2020</p>   
                         </div>
-                        <div class="cardProjetos swiper-slide categWeb">
-                            <a href="https://criativamentecare.com/" target="_blank" style="text-decoration: none;">
-                                <img loading="lazy" class="imgProjetos" src="/assets/img/imgPort/CriativLogo.svg" alt="Logo do projeto Criativamente Care" style="scale: initial; object-fit: cover;">
-                                <p style="color: white;">Criativamente Care</p>
-                                <p style="font-size: 0.80rem; color: darkgray;">Landing Page e Sistema Interno</p>
-                            </a>
-                        </div>
-                        <div class="cardProjetos swiper-slide categWeb">
-                            <a href="https://finatechcompany.com.br/" target="_blank" style="text-decoration: none;">
-                                <img loading="lazy" class="imgProjetos" src="/assets/img/imgPort/FinatechLogo.svg" alt="Logo do projeto Finatech" style="scale: initial; object-fit: cover;">
-                                <p style="color: white;">Finatech Financiamento</p>
-                                <p style="font-size: 0.80rem; color: darkgray;">Sistema Interno</p>
-                            </a>
-                        </div>
-
-                        <!-- <div class="cardProjetos swiper-slide categMobile">
-                            <img class="imgProjetos" src="/assets/img/icons/default.svg" alt="projeto vazio">
-                            <p>Projeto Tal</p>
-                        </div>
-                        <div class="cardProjetos swiper-slide categUI">
-                            <img class="imgProjetos" src="/assets/img/icons/default.svg" alt="projeto vazio">
-                            <p>Projeto Tal</p>
-                        </div> -->
+                        <p class="paragrafoPrincipal colorSubtitulo">Tecnólogo em Informática</p>
                     </div>
-                    <div class="swiper-button-prev colorSecundary"></div>
-                    <div class="swiper-button-next colorSecundary"></div>
-
-                    <!-- <div class="swiper-pagination colorSecundary"></div> -->
+                    <div class="cardItem">
+                        <div class="divTitulo" style="padding: 0.5rem; gap: 1rem;">
+                            <h3 class="tituloPrincipal">Universidade Cruzeiro do Sul</h3> 
+                            <p class="timeCard">Fev 2022 - dez 2023</p>   
+                        </div>
+                        <p class="paragrafoPrincipal colorSubtitulo">Superior em Análise e Desenvolvimento de Sistemas</p>
+                    </div>
+                    <div class="cardItem">
+                        <div class="divTitulo" style="padding: 0.5rem; gap: 1rem;">
+                            <h3 class="tituloPrincipal">Alura</h3> 
+                            <p class="timeCard">Dez 2023 - Mai 2024</p>   
+                        </div>
+                        <p class="paragrafoPrincipal colorSubtitulo">Desenvolvedor Front-end</p>
+                    </div>
+                    <div class="cardItem">
+                        <div class="divTitulo" style="padding: 0.5rem; gap: 1rem;">
+                            <h3 class="tituloPrincipal">Alura</h3> 
+                            <p class="timeCard">Dez 2023 - Mai 2024</p>   
+                        </div>
+                        <p class="paragrafoPrincipal colorSubtitulo">UI UX Designer</p>
+                    </div>
                 </div>
 
                 <div data-aos="zoom-in-up" class="divLogos">
@@ -548,7 +562,7 @@
     <script src="/assets/js/main.js" type="module" defer></script>
 
     <!-- Service Worker Registration -->
-    <script>
+    <!-- <script>
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('/sw.js')
@@ -560,7 +574,7 @@
                     });
             });
         }
-    </script>
+    </script> -->
 
 </body>
 </html>
