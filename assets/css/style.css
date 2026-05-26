@@ -66,6 +66,12 @@ strong {
     color: var(--secundary-100) !important;
 }
 
+.swiper {
+    width: 90dvw;
+}
+
+
+
 /* wave */
 .custom-shape-divider-bottom-1749230588 {
     /* position: absolute; */
@@ -798,8 +804,11 @@ textarea:focus {
         margin: 20px auto;
     }
 
-    /*  */
+    /* swiper */
 
+    .swiper {
+        width: 50dvw;
+    }
 
 
     /* aside */
