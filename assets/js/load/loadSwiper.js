@@ -22,14 +22,17 @@ export function loadSwiper() {
         },
     });
 
-    const swiperCategorias = new Swiper('.swiperCateg', {
-        centeredSlides: true,
-        slidesPerView: "auto",
-    });
-    swiperCategorias.on('slideChange', function (e) {
-        const slideAtual = e.slides[e.activeIndex] || 0;
-        trocaCategoria(slideAtual.id, e.activeIndex);
-    });
+    const swiperCategEl = document.querySelector('.swiperCateg');
+    if (swiperCategEl) {
+        const swiperCategorias = new Swiper('.swiperCateg', {
+            centeredSlides: true,
+            slidesPerView: "auto",
+        });
+        swiperCategorias.on('slideChange', function (e) {
+            const slideAtual = e.slides[e.activeIndex] || 0;
+            trocaCategoria(slideAtual.id, e.activeIndex);
+        });
+    }
     
     function trocaCategoria(id, index) {
         const projetos = document.querySelectorAll(".cardProjetos");

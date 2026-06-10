@@ -2,28 +2,32 @@ export function loadForm() {
     const formContato = document.getElementById('formContato'); 
     formContato.addEventListener('submit', async (event) => {
         event.preventDefault();
-        const nome = document.getElementById('nome').value;
-        const email = document.getElementById('email').value;
-        const mensagem = document.getElementById('mensagem').value;
+        
+        const formData = new FormData(formContato);
+        const object = Object.fromEntries(formData);
+        const json = JSON.stringify(object);
 
         try {
-            // debugger
-
-            const response = await fetch('/api/formContato.js', {
+            const response = await fetch('https://api.web3forms.com/submit', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ nome, email, mensagem })
+                headers: { 
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
             });
 
-            console.log(response);
             const data = await response.json();
-            console.log(data);
 
             if (data.success) {
-                alert("Formulario enviado com sucesso!");
-            } 
+                alert("Formulário enviado com sucesso!");
+                formContato.reset();
+            } else {
+                alert("Erro ao enviar: " + data.message);
+            }
         } catch (error) {
-            console.error('Erro ao enviar o e-mail:', error);
+            console.error('Erro ao enviar o formulário:', error);
+            alert("Erro de conexão. Tente novamente mais tarde.");
         }
     })
 }

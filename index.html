@@ -95,7 +95,7 @@
     <header class="headerMobile">
         <nav class="navbarMobile">
             <div class="d-flex flex-row gap-2">
-                <img fetchpriority="high" src="/assets/img/notion-face.png" style="width: 20%; border-radius: 50;"  alt="Foto de perfil Lucas Santos">
+                <img fetchpriority="high" src="/assets/img/notion-face.png" style="width: 20%; border-radius: 50%;"  alt="Foto de perfil Lucas Santos">
                 <div>
                     <h3 style="margin: 0;">Lucas Santos</h3>
                     <p class="" style="font-weight: bold; color: light-dark(var(--primary-100), var(--color-white));">Front-End | UX UI</p>
@@ -134,9 +134,7 @@
                         <h1 class="tituloPrincipalApresentacao bold" id="titulo-apresentacao">Eu sou o <span class="colorPrimary">Lucas Santos</span></h1>
                         <h1 class="tituloPrincipalApresentacao bold"><span class="colorPrimary">Front-End</span> e <span class="colorPrimary">UX UI</span> Developer</h1>
                     </div>
-                    <div class="divTriangulo">
-                </div>
-
+                    <div class="divTriangulo"></div>
                 </div>
                 <img loading="lazy" src="/assets/img/notion-face-transparent.png" alt="Caricatura de Lucas Santos - Desenvolvedor Front-End" style="width: 350px; height: 350px;">
             </div>
@@ -322,6 +320,7 @@
     border-radius: 12px;" novalidate>
                     <fieldset>
                         <legend class="sr-only">Formulário de contato</legend>
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
 
                     <div class="floating-label" >
                         <input type="text" id="nome" name="nome" placeholder="" required aria-describedby="nome-help">
@@ -562,20 +561,7 @@
     
     <script src="/assets/js/main.js" type="module" defer></script>
 
-    <!-- Service Worker Registration -->
-    <!-- <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/sw.js')
-                    .then(registration => {
-                        // console.log('ServiceWorker registration successful');
-                    })
-                    .catch(err => {
-                        console.log('ServiceWorker registration failed');
-                    });
-            });
-        }
-    </script> -->
+
 
 </body>
 </html>
