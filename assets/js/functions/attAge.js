@@ -12,4 +12,9 @@ export function attAge() {
     if (element) {
         element.textContent = age;
     }
+
+    const yearElement = document.getElementById('currentYear');
+    if (yearElement) {
+        yearElement.textContent = today.getFullYear();
+    }
 }
