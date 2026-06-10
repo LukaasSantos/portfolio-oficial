@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <script>
-        (function() {
+        (function () {
             var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (window.innerWidth < 768);
             document.documentElement.classList.add(isMobile ? 'is-mobile' : 'is-desktop');
         })();
@@ -265,24 +265,24 @@
                             <a href="https://www.korra.net.br/" target="_blank" style="text-decoration: none;">
                                 <img loading="lazy" class="imgProjetos" src="/assets/img/imgPort/korraLogo.svg"
                                     alt="Logo do projeto Korra">
-                                <p style="color: white;">Korra | Modern Support Plataform</p>
-                                <p style="font-size: 0.80rem; color: darkgray;">Landing Page e Sistema Interno</p>
+                                <p>Korra | Modern Support Plataform</p>
+                                <p class="project-category">Landing Page e Sistema Interno</p>
                             </a>
                         </div>
                         <div class="cardProjetos swiper-slide categLanding categSistema">
                             <a href="https://criativamentecare.com/" target="_blank" style="text-decoration: none;">
                                 <img loading="lazy" class="imgProjetos" src="/assets/img/imgPort/CriativLogo.svg"
                                     alt="Logo do projeto Criativamente Care" style="scale: initial; object-fit: cover;">
-                                <p style="color: white;">Criativamente Care</p>
-                                <p style="font-size: 0.80rem; color: darkgray;">Landing Page e Sistema Interno</p>
+                                <p>Criativamente Care</p>
+                                <p class="project-category">Landing Page e Sistema Interno</p>
                             </a>
                         </div>
                         <div class="cardProjetos swiper-slide categSistema">
                             <a href="https://finatechcompany.com.br/" target="_blank" style="text-decoration: none;">
                                 <img loading="lazy" class="imgProjetos" src="/assets/img/imgPort/FinatechLogo.svg"
                                     alt="Logo do projeto Finatech" style="scale: initial; object-fit: cover;">
-                                <p style="color: white;">Finatech Financiamento</p>
-                                <p style="font-size: 0.80rem; color: darkgray;">Sistema Interno</p>
+                                <p>Finatech Financiamento</p>
+                                <p class="project-category">Sistema Interno</p>
                             </a>
                         </div>
                         <div class="cardProjetos swiper-slide categLanding categTemplate">
@@ -290,8 +290,8 @@
                                 style="text-decoration: none;">
                                 <img loading="lazy" class="imgProjetos" src="/assets/img/imgPort/vetLogo.svg"
                                     alt="Logo do projeto petVida" style="scale: initial; object-fit: cover;">
-                                <p style="color: white;">Clinica petVida (protótipo)</p>
-                                <p style="font-size: 0.80rem; color: darkgray;">Landing Page</p>
+                                <p>Clinica petVida (protótipo)</p>
+                                <p class="project-category">Landing Page</p>
                             </a>
                         </div>
                         <div class="cardProjetos swiper-slide categLanding categTemplate">
@@ -299,8 +299,8 @@
                                 style="text-decoration: none;">
                                 <img loading="lazy" class="imgProjetos" src="/assets/img/imgPort/odontoLogo.svg"
                                     alt="Logo do projeto Sorriso Perfeito" style="scale: initial; object-fit: cover;">
-                                <p style="color: white;">Clinica Sorriso Perfeito (protótipo) </p>
-                                <p style="font-size: 0.80rem; color: darkgray;">Landing Page</p>
+                                <p>Clinica Sorriso Perfeito (protótipo) </p>
+                                <p class="project-category">Landing Page</p>
                             </a>
                         </div>
                     </div>
@@ -355,7 +355,7 @@
                         <h3 class="tituloPrincipal" id="titulo-formacoes">Minhas Formações</h3>
                         <p class="subtituloPrincipal colorSubtitulo">Possuo graduações e diversos cursos</p>
                     </div>
-                    <div class="divFormacoes">
+                    <div class="divFormacoes" style="margin: 1rem;">
                         <div class="cardItem">
                             <div class="divTitulo" style="padding: 0.5rem; gap: 1rem;">
                                 <h3 class="tituloPrincipal">ETEC Dr Celso Giglio</h3>
@@ -424,8 +424,7 @@
                         <h3 class="tituloPrincipal" id="titulo-contato">Entre em Contato</h3>
                         <p class="subtituloPrincipal colorSubtitulo">Envie uma mensagem para mim</p>
                     </div>
-                    <form id="formContato" method="POST" action="" class="cardItem formContato"
-                        style="width: fit-content; border-radius: 12px;" novalidate>
+                    <form id="formContato" method="POST" action="" class="cardItem formContato" novalidate>
                         <fieldset>
                             <legend class="sr-only">Formulário de contato</legend>
                             <input type="hidden" name="access_key" value="b1a46f12-4553-4e63-ad95-18e5fb9e705a">
@@ -469,11 +468,14 @@
                 </div>
                 <div id="descCollapse" class="collapse-content collapsed">
                     <p class="subtituloPrincipal colorSubtitulo mt-2" style="text-align: center;">
-                        Desenvolvedor Full-Stack com sólida experiência na criação de ecossistemas web de alta performance e
+                        Desenvolvedor Full-Stack com sólida experiência na criação de ecossistemas web de alta
+                        performance e
                         interfaces intuitivas. Especialista em JavaScript Vanilla (ES6+) e arquitetura modular, com
-                        proficiência em React, Next.js e PHP (Laravel). Pioneiro na adoção de AI-Assisted Coding, utilizando
+                        proficiência em React, Next.js e PHP (Laravel). Pioneiro na adoção de AI-Assisted Coding,
+                        utilizando
                         o ecossistema Windsurf (Vibecode) para otimização de fluxos de trabalho, refatoração complexa e
-                        aceleração do ciclo de entrega com foco em qualidade. Comprometido com soluções escaláveis que unem
+                        aceleração do ciclo de entrega com foco em qualidade. Comprometido com soluções escaláveis que
+                        unem
                         design centrado no usuário (UX/UI) a práticas rigorosas de Clean Code (SOLID, DRY).</p>
                 </div>
                 <ul class="navMenuSocial">
@@ -538,106 +540,106 @@
                     </div>
                     <div id="habCollapse" class="collapse-content collapsed">
                         <div class="d-flex flex-column gap-3 mt-3">
-                        <div>
-                            <div class="divProgressLabel">
-                                <span class="paragrafoPrincipal colorSubtitulo">HTML</span>
-                                <span class="paragrafoPrincipal colorSubtitulo">95%</span>
+                            <div>
+                                <div class="divProgressLabel">
+                                    <span class="paragrafoPrincipal colorSubtitulo">HTML</span>
+                                    <span class="paragrafoPrincipal colorSubtitulo">95%</span>
+                                </div>
+                                <div class="progress" role="progressbar" aria-label="Exemplo de progresso"
+                                    aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar progress-bar-custom" style="width: 95%"></div>
+                                </div>
                             </div>
-                            <div class="progress" role="progressbar" aria-label="Exemplo de progresso"
-                                aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                                <div class="progress-bar progress-bar-custom" style="width: 95%"></div>
+                            <div>
+                                <div class="divProgressLabel">
+                                    <span class="paragrafoPrincipal colorSubtitulo">CSS</span>
+                                    <span class="paragrafoPrincipal colorSubtitulo">95%</span>
+                                </div>
+                                <div class="progress" role="progressbar" aria-label="Exemplo de progresso"
+                                    aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar progress-bar-custom" style="width: 95%"></div>
+                                </div>
                             </div>
-                        </div>
-                        <div>
-                            <div class="divProgressLabel">
-                                <span class="paragrafoPrincipal colorSubtitulo">CSS</span>
-                                <span class="paragrafoPrincipal colorSubtitulo">95%</span>
+                            <div>
+                                <div class="divProgressLabel">
+                                    <span class="paragrafoPrincipal colorSubtitulo">JS</span>
+                                    <span class="paragrafoPrincipal colorSubtitulo">80%</span>
+                                </div>
+                                <div class="progress" role="progressbar" aria-label="Exemplo de progresso"
+                                    aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar progress-bar-custom" style="width: 80%"></div>
+                                </div>
                             </div>
-                            <div class="progress" role="progressbar" aria-label="Exemplo de progresso"
-                                aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                                <div class="progress-bar progress-bar-custom" style="width: 95%"></div>
+                            <div>
+                                <div class="divProgressLabel">
+                                    <span class="paragrafoPrincipal colorSubtitulo">TypeScript</span>
+                                    <span class="paragrafoPrincipal colorSubtitulo">50%</span>
+                                </div>
+                                <div class="progress" role="progressbar" aria-label="Exemplo de progresso"
+                                    aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar progress-bar-custom" style="width: 50%"></div>
+                                </div>
                             </div>
-                        </div>
-                        <div>
-                            <div class="divProgressLabel">
-                                <span class="paragrafoPrincipal colorSubtitulo">JS</span>
-                                <span class="paragrafoPrincipal colorSubtitulo">80%</span>
+                            <div>
+                                <div class="divProgressLabel">
+                                    <span class="paragrafoPrincipal colorSubtitulo">React</span>
+                                    <span class="paragrafoPrincipal colorSubtitulo">80%</span>
+                                </div>
+                                <div class="progress" role="progressbar" aria-label="Exemplo de progresso"
+                                    aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar progress-bar-custom" style="width: 80%"></div>
+                                </div>
                             </div>
-                            <div class="progress" role="progressbar" aria-label="Exemplo de progresso"
-                                aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                                <div class="progress-bar progress-bar-custom" style="width: 80%"></div>
+                            <div>
+                                <div class="divProgressLabel">
+                                    <span class="paragrafoPrincipal colorSubtitulo">Next.js</span>
+                                    <span class="paragrafoPrincipal colorSubtitulo">40%</span>
+                                </div>
+                                <div class="progress" role="progressbar" aria-label="Exemplo de progresso"
+                                    aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar progress-bar-custom" style="width: 40%"></div>
+                                </div>
                             </div>
-                        </div>
-                        <div>
-                            <div class="divProgressLabel">
-                                <span class="paragrafoPrincipal colorSubtitulo">TypeScript</span>
-                                <span class="paragrafoPrincipal colorSubtitulo">50%</span>
+                            <div>
+                                <div class="divProgressLabel">
+                                    <span class="paragrafoPrincipal colorSubtitulo">Vue.js</span>
+                                    <span class="paragrafoPrincipal colorSubtitulo">20%</span>
+                                </div>
+                                <div class="progress" role="progressbar" aria-label="Exemplo de progresso"
+                                    aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar progress-bar-custom" style="width: 20%"></div>
+                                </div>
                             </div>
-                            <div class="progress" role="progressbar" aria-label="Exemplo de progresso"
-                                aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                                <div class="progress-bar progress-bar-custom" style="width: 50%"></div>
+                            <div>
+                                <div class="divProgressLabel">
+                                    <span class="paragrafoPrincipal colorSubtitulo">PHP</span>
+                                    <span class="paragrafoPrincipal colorSubtitulo">35%</span>
+                                </div>
+                                <div class="progress" role="progressbar" aria-label="Exemplo de progresso"
+                                    aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar progress-bar-custom" style="width: 35%"></div>
+                                </div>
                             </div>
-                        </div>
-                        <div>
-                            <div class="divProgressLabel">
-                                <span class="paragrafoPrincipal colorSubtitulo">React</span>
-                                <span class="paragrafoPrincipal colorSubtitulo">80%</span>
+                            <div>
+                                <div class="divProgressLabel">
+                                    <span class="paragrafoPrincipal colorSubtitulo">Node.js</span>
+                                    <span class="paragrafoPrincipal colorSubtitulo">30%</span>
+                                </div>
+                                <div class="progress" role="progressbar" aria-label="Exemplo de progresso"
+                                    aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar progress-bar-custom" style="width: 30%"></div>
+                                </div>
                             </div>
-                            <div class="progress" role="progressbar" aria-label="Exemplo de progresso"
-                                aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                                <div class="progress-bar progress-bar-custom" style="width: 80%"></div>
+                            <div>
+                                <div class="divProgressLabel">
+                                    <span class="paragrafoPrincipal colorSubtitulo">Figma</span>
+                                    <span class="paragrafoPrincipal colorSubtitulo">80%</span>
+                                </div>
+                                <div class="progress" role="progressbar" aria-label="Exemplo de progresso"
+                                    aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar progress-bar-custom" style="width: 80%"></div>
+                                </div>
                             </div>
-                        </div>
-                        <div>
-                            <div class="divProgressLabel">
-                                <span class="paragrafoPrincipal colorSubtitulo">Next.js</span>
-                                <span class="paragrafoPrincipal colorSubtitulo">40%</span>
-                            </div>
-                            <div class="progress" role="progressbar" aria-label="Exemplo de progresso"
-                                aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
-                                <div class="progress-bar progress-bar-custom" style="width: 40%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="divProgressLabel">
-                                <span class="paragrafoPrincipal colorSubtitulo">Vue.js</span>
-                                <span class="paragrafoPrincipal colorSubtitulo">20%</span>
-                            </div>
-                            <div class="progress" role="progressbar" aria-label="Exemplo de progresso"
-                                aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                <div class="progress-bar progress-bar-custom" style="width: 20%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="divProgressLabel">
-                                <span class="paragrafoPrincipal colorSubtitulo">PHP</span>
-                                <span class="paragrafoPrincipal colorSubtitulo">35%</span>
-                            </div>
-                            <div class="progress" role="progressbar" aria-label="Exemplo de progresso"
-                                aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
-                                <div class="progress-bar progress-bar-custom" style="width: 35%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="divProgressLabel">
-                                <span class="paragrafoPrincipal colorSubtitulo">Node.js</span>
-                                <span class="paragrafoPrincipal colorSubtitulo">30%</span>
-                            </div>
-                            <div class="progress" role="progressbar" aria-label="Exemplo de progresso"
-                                aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
-                                <div class="progress-bar progress-bar-custom" style="width: 30%"></div>
-                            </div>
-                        </div>
-                        <div>
-                            <div class="divProgressLabel">
-                                <span class="paragrafoPrincipal colorSubtitulo">Figma</span>
-                                <span class="paragrafoPrincipal colorSubtitulo">80%</span>
-                            </div>
-                            <div class="progress" role="progressbar" aria-label="Exemplo de progresso"
-                                aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
-                                <div class="progress-bar progress-bar-custom" style="width: 80%"></div>
-                            </div>
-                        </div>
                         </div>
                     </div>
                 </div>
@@ -651,41 +653,49 @@
                     </div>
                     <div id="conCollapse" class="collapse-content collapsed">
                         <ul class="ul-conhecimentos mt-3">
-                        <li class="paragrafoPrincipal thin">
-                            <div><img loading="lazy" src="/assets/img/icons/conhecimento.svg" alt="Conhecimento técnico"
-                                    style="margin-right: 10px;"><strong>Front-End:</strong> WordPress, JavaScript
-                                (ES6+), TypeScript, React, Next.js, Vue.js, HTML5, CSS3.</div>
-                        </li>
-                        <li class="paragrafoPrincipal thin">
-                            <div><img loading="lazy" src="/assets/img/icons/conhecimento.svg" alt="Conhecimento técnico"
-                                    style="margin-right: 10px;">SPA, Modules, Components, Routing, State Management, PWA
-                            </div>
-                        </li>
-                        <li class="paragrafoPrincipal thin">
-                            <div><img loading="lazy" src="/assets/img/icons/conhecimento.svg" alt="Conhecimento técnico"
-                                    style="margin-right: 10px;"><strong>Estilização & UI:</strong> Tailwind CSS,
-                                Bootstrap, Materialize, Design Responsivo, Figma (UX/UI).</div>
-                        </li>
-                        <li class="paragrafoPrincipal thin">
-                            <div><img loading="lazy" src="/assets/img/icons/conhecimento.svg" alt="Conhecimento técnico"
-                                    style="margin-right: 10px;"><strong>Back-End:</strong> PHP, Laravel, Node.js, REST
-                                APIs.</div>
-                        </li>
-                        <li class="paragrafoPrincipal thin">
-                            <div><img loading="lazy" src="/assets/img/icons/conhecimento.svg" alt="Conhecimento técnico"
-                                    style="margin-right: 10px;"><strong>Arquitetura & Ferramentas:</strong> SOLID, KISS,
-                                DRY, Padrões de Projeto, Git/GitHub, Vite, SEO.</div>
-                        </li>
-                        <li class="paragrafoPrincipal thin">
-                            <div><img loading="lazy" src="/assets/img/icons/conhecimento.svg" alt="Conhecimento técnico"
-                                    style="margin-right: 10px;"><strong>Metodologias:</strong> Scrum, Kanban,
-                                Gerenciamento de Projetos Ágeis.</div>
-                        </li>
-                        <li class="paragrafoPrincipal thin">
-                            <div><img loading="lazy" src="/assets/img/icons/conhecimento.svg" alt="Conhecimento técnico"
-                                    style="margin-right: 10px;"><strong>Ferramentas de IA:</strong> Windsurf (Vibecode),
-                                AI-Assisted Coding, Prompt Engineering para desenvolvimento de software.</div>
-                        </li>
+                            <li class="paragrafoPrincipal thin">
+                                <div><img loading="lazy" src="/assets/img/icons/conhecimento.svg"
+                                        alt="Conhecimento técnico"
+                                        style="margin-right: 10px;"><strong>Front-End:</strong> WordPress, JavaScript
+                                    (ES6+), TypeScript, React, Next.js, Vue.js, HTML5, CSS3.</div>
+                            </li>
+                            <li class="paragrafoPrincipal thin">
+                                <div><img loading="lazy" src="/assets/img/icons/conhecimento.svg"
+                                        alt="Conhecimento técnico" style="margin-right: 10px;">SPA, Modules, Components,
+                                    Routing, State Management, PWA
+                                </div>
+                            </li>
+                            <li class="paragrafoPrincipal thin">
+                                <div><img loading="lazy" src="/assets/img/icons/conhecimento.svg"
+                                        alt="Conhecimento técnico" style="margin-right: 10px;"><strong>Estilização &
+                                        UI:</strong> Tailwind CSS,
+                                    Bootstrap, Materialize, Design Responsivo, Figma (UX/UI).</div>
+                            </li>
+                            <li class="paragrafoPrincipal thin">
+                                <div><img loading="lazy" src="/assets/img/icons/conhecimento.svg"
+                                        alt="Conhecimento técnico"
+                                        style="margin-right: 10px;"><strong>Back-End:</strong> PHP, Laravel, Node.js,
+                                    REST
+                                    APIs.</div>
+                            </li>
+                            <li class="paragrafoPrincipal thin">
+                                <div><img loading="lazy" src="/assets/img/icons/conhecimento.svg"
+                                        alt="Conhecimento técnico" style="margin-right: 10px;"><strong>Arquitetura &
+                                        Ferramentas:</strong> SOLID, KISS,
+                                    DRY, Padrões de Projeto, Git/GitHub, Vite, SEO.</div>
+                            </li>
+                            <li class="paragrafoPrincipal thin">
+                                <div><img loading="lazy" src="/assets/img/icons/conhecimento.svg"
+                                        alt="Conhecimento técnico"
+                                        style="margin-right: 10px;"><strong>Metodologias:</strong> Scrum, Kanban,
+                                    Gerenciamento de Projetos Ágeis.</div>
+                            </li>
+                            <li class="paragrafoPrincipal thin">
+                                <div><img loading="lazy" src="/assets/img/icons/conhecimento.svg"
+                                        alt="Conhecimento técnico" style="margin-right: 10px;"><strong>Ferramentas de
+                                        IA:</strong> Windsurf (Vibecode),
+                                    AI-Assisted Coding, Prompt Engineering para desenvolvimento de software.</div>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -699,33 +709,33 @@
                     </div>
                     <div id="linCollapse" class="collapse-content collapsed">
                         <div class="d-flex flex-column gap-3 mt-3">
-                        <div>
-                            <div class="divProgressLabel">
-                                <span class="paragrafoPrincipal colorSubtitulo">Português</span>
-                                <span class="paragrafoPrincipal colorSubtitulo">95%</span>
+                            <div>
+                                <div class="divProgressLabel">
+                                    <span class="paragrafoPrincipal colorSubtitulo">Português</span>
+                                    <span class="paragrafoPrincipal colorSubtitulo">95%</span>
+                                </div>
+                                <div class="progress" role="progressbar" aria-label="Exemplo de progresso"
+                                    aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar progress-bar-custom" style="width: 95%"></div>
+                                </div>
                             </div>
-                            <div class="progress" role="progressbar" aria-label="Exemplo de progresso"
-                                aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
-                                <div class="progress-bar progress-bar-custom" style="width: 95%"></div>
+                            <div>
+                                <div class="divProgressLabel">
+                                    <span class="paragrafoPrincipal colorSubtitulo">Inglês</span>
+                                    <span class="paragrafoPrincipal colorSubtitulo">60%</span>
+                                </div>
+                                <div class="progress" role="progressbar" aria-label="Exemplo de progresso"
+                                    aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                                    <div class="progress-bar progress-bar-custom" style="width: 60%"></div>
+                                </div>
                             </div>
                         </div>
-                        <div>
-                            <div class="divProgressLabel">
-                                <span class="paragrafoPrincipal colorSubtitulo">Inglês</span>
-                                <span class="paragrafoPrincipal colorSubtitulo">60%</span>
-                            </div>
-                            <div class="progress" role="progressbar" aria-label="Exemplo de progresso"
-                                aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
-                                <div class="progress-bar progress-bar-custom" style="width: 60%"></div>
+
+                        <button class="btnAcessar" onclick="window.open('/assets/pdf/cv_lucas_santos.pdf', '_blank')"
+                            aria-label="Baixar currículo em PDF">Download CV <img loading="lazy"
+                                src="/assets/img/icons/download.svg" alt="Ícone de download"></button>
                     </div>
                 </div>
-            </div>
-
-                <button class="btnAcessar" onclick="window.open('/assets/pdf/cv_lucas_santos.pdf', '_blank')"
-                    aria-label="Baixar currículo em PDF">Download CV <img loading="lazy"
-                        src="/assets/img/icons/download.svg" alt="Ícone de download"></button>
-            </div>
-            </div>
 
         </aside>
 

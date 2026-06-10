@@ -19,7 +19,7 @@
     --subtituloPrincipal-size: 0.875rem;
     --tituloCard-size: 1.35rem;
     --paragrafo-size: 1rem;
-    --subtitulo-color: light-dark(#64748B, #94A3B8); 
+    --subtitulo-color: light-dark(#64748B, #94A3B8);
 
     --glass-bg: light-dark(rgba(255, 255, 255, 0.45), rgba(20, 18, 33, 0.45));
     --glass-border: light-dark(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.08));
@@ -32,9 +32,9 @@
 
 body {
     scroll-behavior: smooth;
-    box-sizing:content-box;
+    box-sizing: content-box;
     text-align: center;
-    color-scheme:light dark;
+    color-scheme: light dark;
     background-color: light-dark(var(--secundary-50), var(--dark-mode-primary));
     color: light-dark(var(--color-black), var(--color-white));
 }
@@ -105,7 +105,8 @@ strong {
 }
 
 ::-webkit-scrollbar-track {
-    background: light-dark(var(--secundary-50), var(--dark-mode-primary)); ;
+    background: light-dark(var(--secundary-50), var(--dark-mode-primary));
+    ;
     border-radius: 10px;
 }
 
@@ -167,6 +168,7 @@ textarea:focus {
 
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {
@@ -175,7 +177,7 @@ textarea:focus {
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
-    
+
     .animate__animated,
     [data-aos] {
         animation: none !important;
@@ -205,7 +207,7 @@ textarea:focus {
     border-radius: 4px;
     border: none;
     cursor: pointer;
-    scale: 1;    
+    scale: 1;
     transition: all .1s ease-in-out
 }
 
@@ -292,7 +294,8 @@ textarea:focus {
 }
 
 .colorPrimary {
-    color: light-dark(var(--primary-100), var(--secundary-100));;
+    color: light-dark(var(--primary-100), var(--secundary-100));
+    ;
 }
 
 .colorSecundary {
@@ -307,6 +310,9 @@ textarea:focus {
     display: none;
 } */
 
+.formContato {
+    width: 100%;
+}
 
 /* floating label */
 .floating-label {
@@ -315,7 +321,8 @@ textarea:focus {
     margin: 0.5rem;
 }
 
-.floating-label input, .floating-label textarea {
+.floating-label input,
+.floating-label textarea {
     width: 95%;
     height: 3rem;
     padding-top: 20px;
@@ -339,15 +346,15 @@ textarea:focus {
 .floating-label input:focus~label,
 .floating-label input:not(:placeholder-shown)~label,
 .floating-label textarea:focus~label,
-.floating-label textarea:not(:placeholder-shown)~label
-{
+.floating-label textarea:not(:placeholder-shown)~label {
     top: 2px;
     left: 18px;
     font-size: 0.85em;
     color: var(--primary-100);
 }
 
-.floating-label input:focus, .floating-label textarea:focus {
+.floating-label input:focus,
+.floating-label textarea:focus {
     outline: none;
     border-color: var(--primary-100);
     box-shadow: 0 0 12px light-dark(rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.3));
@@ -356,7 +363,8 @@ textarea:focus {
 
 /* header */
 .headerMobile {
-    position: fixed; /* Fixa o header no topo */
+    position: fixed;
+    /* Fixa o header no topo */
     width: 100vw;
     top: 0;
     left: 0;
@@ -365,7 +373,8 @@ textarea:focus {
 }
 
 .headerMobile.hidden {
-    transform: translateY(-100%); /* Move o header para fora da tela */
+    transform: translateY(-100%);
+    /* Move o header para fora da tela */
 }
 
 .navbarMobile {
@@ -442,7 +451,7 @@ html.is-desktop .headerMobile {
 }
 
 .divApresentacao {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -465,7 +474,9 @@ html.is-desktop .headerMobile {
 
 
 /* meus servicos */
-.divServicos, .divFormacoes, .divExperiencias {
+.divServicos,
+.divFormacoes,
+.divExperiencias {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -517,7 +528,7 @@ html.is-desktop .headerMobile {
     box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
 }
 
-.divProjetos { 
+.divProjetos {
     margin: 5rem 0;
 }
 
@@ -528,8 +539,18 @@ html.is-desktop .headerMobile {
 }
 
 .cardProjetos {
-    border-radius: 12px;
-    padding: 10px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 1.25rem;
+    box-shadow: var(--glass-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .cardProjetos.hidden {
@@ -537,14 +558,29 @@ html.is-desktop .headerMobile {
 }
 
 .cardProjetos:hover {
-    scale: 1.05;
-    transition: 1s;
+    transform: translateY(-4px);
+    box-shadow: light-dark(0 12px 40px 0 rgba(31, 38, 135, 0.1), 0 12px 40px 0 rgba(0, 0, 0, 0.5));
+}
+
+.cardProjetos p {
+    color: light-dark(var(--color-black), var(--color-white)) !important;
+    margin: 0.75rem 0 0.25rem 0;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.cardProjetos p.project-category {
+    font-size: 0.85rem !important;
+    color: var(--subtitulo-color) !important;
+    font-weight: 400;
+    margin: 0;
 }
 
 .imgProjetos {
     width: 300px;
     height: 300px;
     border-radius: 12px;
+    object-fit: cover;
 }
 
 .divLogos {
@@ -565,7 +601,8 @@ html.is-desktop .headerMobile {
     width: max-content;
 
     /* Animação */
-    animation: scroll-logos 20s linear infinite; /* Nome, duração, tipo, repetição */
+    animation: scroll-logos 20s linear infinite;
+    /* Nome, duração, tipo, repetição */
 
 }
 
@@ -580,7 +617,7 @@ html.is-desktop .headerMobile {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0 20px; 
+    padding: 0 20px;
     flex-shrink: 0;
 }
 
@@ -589,16 +626,23 @@ html.is-desktop .headerMobile {
     width: 250px;
     height: 250px;
 
-    filter: light-dark(grayscale(100%), grayscale(0%)); /* Exemplo: logos cinza no light, coloridos no dark */
-    opacity: 0.7; /* Suaviza um pouco o logo */
-    transition: all 0.3s ease-in-out; /* Transição para o hover */
+    filter: light-dark(grayscale(100%), grayscale(0%));
+    /* Exemplo: logos cinza no light, coloridos no dark */
+    opacity: 0.7;
+    /* Suaviza um pouco o logo */
+    transition: all 0.3s ease-in-out;
+    /* Transição para o hover */
 }
 
 .ulLogos li:hover .imgLogos {
-    opacity: 1; /* Fica totalmente visível no hover */
-    filter: none; /* Remove o filtro de cinza no hover */
-    transform: scale(1.05); /* Pequeno zoom no hover */
+    opacity: 1;
+    /* Fica totalmente visível no hover */
+    filter: none;
+    /* Remove o filtro de cinza no hover */
+    transform: scale(1.05);
+    /* Pequeno zoom no hover */
 }
+
 /* Custom Collapse / Accordion styles */
 .collapse-header {
     display: flex;
@@ -663,18 +707,21 @@ html.is-desktop .headerMobile {
     gap: 1rem;
 }
 
-.navCardSocial{
+.navCardSocial {
     width: 30px;
     height: 30px;
     border-radius: 20px;
-    background-color: light-dark(var(--primary-100), var(--secundary-100));;
+    background-color: light-dark(var(--primary-100), var(--secundary-100));
+    ;
 }
 
 .hr-primary {
     width: 100%;
     border: none;
-    border-top: 5px dotted light-dark(var(--primary-100), var(--secundary-100));; 
-    color: light-dark(var(--primary-100), var(--secundary-100));;
+    border-top: 5px dotted light-dark(var(--primary-100), var(--secundary-100));
+    ;
+    color: light-dark(var(--primary-100), var(--secundary-100));
+    ;
     background-color: transparent;
     height: 1px;
 }
@@ -697,7 +744,7 @@ html.is-desktop .headerMobile {
 }
 
 .itemSobreMim {
-    display: flex;    
+    display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
@@ -705,7 +752,8 @@ html.is-desktop .headerMobile {
 }
 
 .subItemSobreMim {
-    border-left: 10px solid light-dark(var(--primary-100), var(--secundary-100));;
+    border-left: 10px solid light-dark(var(--primary-100), var(--secundary-100));
+    ;
     padding-left: 0.5rem;
 }
 
@@ -728,14 +776,14 @@ html.is-desktop .headerMobile {
 
 .progress-bar-custom {
     background: linear-gradient(90deg, var(--primary-100) 0%, var(--secundary-100) 100%);
-    border-radius: 50rem !important; 
+    border-radius: 50rem !important;
 }
 
 .progress {
     flex-grow: 1;
     height: 8px;
     border-radius: 50rem;
-    background-color: light-dark(#E2E8F0, #1E1B4B); 
+    background-color: light-dark(#E2E8F0, #1E1B4B);
     overflow: hidden;
 }
 
@@ -778,7 +826,7 @@ html.is-desktop .headerMobile {
         flex-direction: column;
         gap: 0.5rem;
     }
-    
+
     .aMenu {
         text-decoration: none;
         border-radius: 50px;
@@ -786,7 +834,8 @@ html.is-desktop .headerMobile {
     }
 
     .aMenu:hover {
-        background-color: light-dark(var(--primary-100), var(--secundary-100));;
+        background-color: light-dark(var(--primary-100), var(--secundary-100));
+        ;
         transition: all .2s ease-in-out;
     }
 
@@ -805,8 +854,8 @@ html.is-desktop .headerMobile {
         border-radius: 20px;
         overflow: hidden;
         background: radial-gradient(circle at 0% 0%, rgba(139, 92, 246, 0.12) 0%, transparent 60%),
-                    radial-gradient(circle at 100% 100%, rgba(99, 102, 241, 0.12) 0%, transparent 60%),
-                    light-dark(#ffffff, #0E0D1B);
+            radial-gradient(circle at 100% 100%, rgba(99, 102, 241, 0.12) 0%, transparent 60%),
+            light-dark(#ffffff, #0E0D1B);
         border: 1px solid var(--glass-border);
         box-shadow: var(--glass-shadow);
     }
@@ -854,6 +903,7 @@ html.is-desktop .headerMobile {
         flex-wrap: wrap;
         justify-content: center;
     }
+
     .divServicos .cardItem {
         width: 30%;
     }
@@ -863,15 +913,18 @@ html.is-desktop .headerMobile {
         transition: all .2s ease-in-out;
 
     }
+
     .cardWeb:hover {
         background-color: var(--secundary-100);
         transition: all .2s ease-in-out;
         color: var(--color-white);
         scale: 1.05;
         box-shadow: 0px 0px 20px 0px light-dark(var(--primary-100), var(--secundary-100));
+
         .imgWeb {
             content: url('/assets/img/icons/coding-white.svg');
         }
+
         .subtituloPrincipal {
             color: var(--color-white);
         }
@@ -881,15 +934,19 @@ html.is-desktop .headerMobile {
         scale: 1;
         transition: all .2s ease-in-out;
     }
+
     .cardDesign:hover {
         background-color: var(--secundary-100);
         transition: all .2s ease-in-out;
         color: var(--color-white);
-        scale: 1.05;       
-        box-shadow: 0px 0px 20px 0px light-dark(var(--primary-100), var(--secundary-100));;
+        scale: 1.05;
+        box-shadow: 0px 0px 20px 0px light-dark(var(--primary-100), var(--secundary-100));
+        ;
+
         .imgDesign {
             content: url('/assets/img/icons/illustration-white.svg');
         }
+
         .subtituloPrincipal {
             color: var(--color-white);
         }
@@ -897,13 +954,15 @@ html.is-desktop .headerMobile {
 
     /* minhas formacoes, experiencias */
 
-    .divFormacoes, .divExperiencias {
+    .divFormacoes,
+    .divExperiencias {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
     }
 
-    .divFormacoes .cardItem, .divExperiencias .cardItem {
+    .divFormacoes .cardItem,
+    .divExperiencias .cardItem {
         flex-direction: row;
         justify-content: space-between;
         width: 45%;
@@ -911,16 +970,21 @@ html.is-desktop .headerMobile {
         transition: all .2s ease-in-out;
     }
 
-    .divFormacoes .cardItem:hover, .divExperiencias .cardItem:hover {
+    .divFormacoes .cardItem:hover,
+    .divExperiencias .cardItem:hover {
         background-color: var(--secundary-100);
         transition: all .2s ease-in-out;
         color: var(--color-white);
-        scale: 1.05;       
-        box-shadow: 0px 0px 10px 0px light-dark(var(--primary-100), var(--secundary-100));;
+        scale: 1.05;
+        box-shadow: 0px 0px 10px 0px light-dark(var(--primary-100), var(--secundary-100));
+        ;
+
         .timeCard {
             background-color: var(--color-white);
-            color: light-dark(var(--primary-100), var(--secundary-100));;
+            color: light-dark(var(--primary-100), var(--secundary-100));
+            ;
         }
+
         .colorSubtitulo {
             color: var(--color-white);
         }
@@ -946,25 +1010,29 @@ html.is-desktop .headerMobile {
     .asideMenuLateral {
         width: 25%;
         position: sticky;
-        top: 0px; /* Distância do topo da viewport quando ela ficar fixa */
-        height: fit-content; /* Garante que a altura da barra lateral se ajuste ao seu conteúdo */
+        top: 0px;
+        /* Distância do topo da viewport quando ela ficar fixa */
+        height: fit-content;
+        /* Garante que a altura da barra lateral se ajuste ao seu conteúdo */
     }
 
 
-    
+
     /* ================ troca foto header ================ */
 
     .imgMenuHome {
         content: url('/assets/img/icons/header/home-gray.svg');
         alt: 'home';
     }
+
     .imgMenuHome:hover {
         content: url('/assets/img/icons/header/home-white.svg');
     }
-    
+
     .imgMenuServicos {
         content: url('/assets/img/icons/header/servicos-gray.svg');
     }
+
     .imgMenuServicos:hover {
         content: url('/assets/img/icons/header/servicos-white.svg');
     }
@@ -972,6 +1040,7 @@ html.is-desktop .headerMobile {
     .imgMenuFormacoes {
         content: url('/assets/img/icons/header/formacao-gray.svg');
     }
+
     .imgMenuFormacoes:hover {
         content: url('/assets/img/icons/header/formacao-white.svg');
     }
@@ -979,6 +1048,7 @@ html.is-desktop .headerMobile {
     .imgMenuExperiencia {
         content: url('/assets/img/icons/header/experiencia-gray.svg');
     }
+
     .imgMenuExperiencia:hover {
         content: url('/assets/img/icons/header/experiencia-white.svg');
     }
@@ -986,6 +1056,7 @@ html.is-desktop .headerMobile {
     .imgMenuPortfolio {
         content: url('/assets/img/icons/header/portfolio-gray.svg');
     }
+
     .imgMenuPortfolio:hover {
         content: url('/assets/img/icons/header/portfolio-white.svg');
     }
@@ -993,6 +1064,7 @@ html.is-desktop .headerMobile {
     .imgMenuContato {
         content: url('/assets/img/icons/header/contato-gray.svg');
     }
+
     .imgMenuContato:hover {
         content: url('/assets/img/icons/header/contato-white.svg');
     }
@@ -1000,11 +1072,12 @@ html.is-desktop .headerMobile {
     .imgWeb {
         content: light-dark(url('/assets/img/icons/coding.svg'), url('/assets/img/icons/coding-lightpurple.svg'));
     }
+
     .imgDesign {
         content: light-dark(url('/assets/img/icons/illustration.svg'), url('/assets/img/icons/illustration-lightpurple.svg'));
     }
 
-    
+
     /* ================================================ */
 
 }
@@ -1012,8 +1085,10 @@ html.is-desktop .headerMobile {
 /* Definição da Animação */
 @keyframes scroll-logos {
     from {
-        transform: translateX(0); /* Começa na posição normal */
+        transform: translateX(0);
+        /* Começa na posição normal */
     }
+
     to {
         /* Move a lista para a esquerda pela largura do conjunto original de logos.
            Como duplicamos o conteúdo, -50% do total da ulLogos vai mover o primeiro conjunto para fora da vista,
