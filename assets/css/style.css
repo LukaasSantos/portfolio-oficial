@@ -591,7 +591,39 @@ textarea:focus {
     filter: none; /* Remove o filtro de cinza no hover */
     transform: scale(1.05); /* Pequeno zoom no hover */
 }
+/* Custom Collapse / Accordion styles */
+.collapse-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    user-select: none;
+}
 
+.collapse-header .toggle-icon {
+    font-size: 1.1rem;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--primary-100);
+}
+
+.collapse-header.collapsed .toggle-icon {
+    transform: rotate(-90deg);
+}
+
+.collapse-content {
+    width: 100%;
+    max-height: 1000px;
+    opacity: 1;
+    overflow: hidden;
+    transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+}
+
+.collapse-content.collapsed {
+    max-height: 0;
+    opacity: 0;
+    pointer-events: none;
+}
 
 
 /* aside menu lateral */

@@ -444,13 +444,19 @@
                 <!-- perfil -->
                 <img loading="lazy" class="imgPerfil" src="/assets/img/perfil.jpg"
                     alt="Foto de perfil profissional Lucas Santos">
-                <p class="subtituloPrincipal colorSubtitulo">
-                    Desenvolvedor Full-Stack com sólida experiência na criação de ecossistemas web de alta performance e
-                    interfaces intuitivas. Especialista em JavaScript Vanilla (ES6+) e arquitetura modular, com
-                    proficiência em React, Next.js e PHP (Laravel). Pioneiro na adoção de AI-Assisted Coding, utilizando
-                    o ecossistema Windsurf (Vibecode) para otimização de fluxos de trabalho, refatoração complexa e
-                    aceleração do ciclo de entrega com foco em qualidade. Comprometido com soluções escaláveis que unem
-                    design centrado no usuário (UX/UI) a práticas rigorosas de Clean Code (SOLID, DRY).</p>
+                <div class="collapse-header collapsed" data-target="descCollapse">
+                    <h3 class="tituloCard bold">Resumo Profissional</h3>
+                    <i class="bi bi-chevron-down toggle-icon"></i>
+                </div>
+                <div id="descCollapse" class="collapse-content collapsed">
+                    <p class="subtituloPrincipal colorSubtitulo mt-2" style="text-align: center;">
+                        Desenvolvedor Full-Stack com sólida experiência na criação de ecossistemas web de alta performance e
+                        interfaces intuitivas. Especialista em JavaScript Vanilla (ES6+) e arquitetura modular, com
+                        proficiência em React, Next.js e PHP (Laravel). Pioneiro na adoção de AI-Assisted Coding, utilizando
+                        o ecossistema Windsurf (Vibecode) para otimização de fluxos de trabalho, refatoração complexa e
+                        aceleração do ciclo de entrega com foco em qualidade. Comprometido com soluções escaláveis que unem
+                        design centrado no usuário (UX/UI) a práticas rigorosas de Clean Code (SOLID, DRY).</p>
+                </div>
                 <ul class="navMenuSocial">
                     <li class="navCardSocial"><a href="https://wa.me/5511997252646"
                             aria-label="Contato via WhatsApp"><img src="/assets/img/icons/social/whats.svg"
@@ -507,8 +513,12 @@
 
                 <!-- habilidades -->
                 <div class="progressContainer">
-                    <h3 class="tituloCard bold">Habilidades</h3>
-                    <div class="d-flex flex-column gap-3">
+                    <div class="collapse-header collapsed" data-target="habCollapse">
+                        <h3 class="tituloCard bold">Habilidades</h3>
+                        <i class="bi bi-chevron-down toggle-icon"></i>
+                    </div>
+                    <div id="habCollapse" class="collapse-content collapsed">
+                        <div class="d-flex flex-column gap-3 mt-3">
                         <div>
                             <div class="divProgressLabel">
                                 <span class="paragrafoPrincipal colorSubtitulo">HTML</span>
@@ -609,14 +619,19 @@
                                 <div class="progress-bar progress-bar-custom" style="width: 80%"></div>
                             </div>
                         </div>
+                        </div>
                     </div>
                 </div>
                 <hr class="hr-primary">
 
                 <!-- conhecimentos -->
                 <div class="divConhecimento">
-                    <h3 class="tituloCard bold">Conhecimentos</h3>
-                    <ul class="ul-conhecimentos">
+                    <div class="collapse-header collapsed" data-target="conCollapse">
+                        <h3 class="tituloCard bold">Conhecimentos</h3>
+                        <i class="bi bi-chevron-down toggle-icon"></i>
+                    </div>
+                    <div id="conCollapse" class="collapse-content collapsed">
+                        <ul class="ul-conhecimentos mt-3">
                         <li class="paragrafoPrincipal thin">
                             <div><img loading="lazy" src="/assets/img/icons/conhecimento.svg" alt="Conhecimento técnico"
                                     style="margin-right: 10px;"><strong>Front-End:</strong> WordPress, JavaScript
@@ -652,14 +667,19 @@
                                     style="margin-right: 10px;"><strong>Ferramentas de IA:</strong> Windsurf (Vibecode),
                                 AI-Assisted Coding, Prompt Engineering para desenvolvimento de software.</div>
                         </li>
-                    </ul>
+                        </ul>
+                    </div>
                 </div>
                 <hr class="hr-primary">
 
                 <!-- linguagens -->
                 <div class="progressContainer">
-                    <h3 class="tituloCard bold">Linguagens</h3>
-                    <div class="d-flex flex-column gap-3">
+                    <div class="collapse-header collapsed" data-target="linCollapse">
+                        <h3 class="tituloCard bold">Linguagens</h3>
+                        <i class="bi bi-chevron-down toggle-icon"></i>
+                    </div>
+                    <div id="linCollapse" class="collapse-content collapsed">
+                        <div class="d-flex flex-column gap-3 mt-3">
                         <div>
                             <div class="divProgressLabel">
                                 <span class="paragrafoPrincipal colorSubtitulo">Português</span>
@@ -678,11 +698,9 @@
                             <div class="progress" role="progressbar" aria-label="Exemplo de progresso"
                                 aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
                                 <div class="progress-bar progress-bar-custom" style="width: 60%"></div>
-                            </div>
-                        </div>
                     </div>
-
                 </div>
+            </div>
 
                 <button class="btnAcessar" onclick="window.open('/assets/pdf/cv_lucas_santos.pdf', '_blank')"
                     aria-label="Baixar currículo em PDF">Download CV <img loading="lazy"
