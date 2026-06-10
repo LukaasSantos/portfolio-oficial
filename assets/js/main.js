@@ -8,13 +8,20 @@ import { attAge } from '/assets/js/functions/attAge.js';
 import { loadCollapse } from '/assets/js/load/loadCollapse.js';
 
 document.addEventListener('DOMContentLoaded', function() {
-    // loads
-    loadScrollMenu();
-    loadTippy();
+    const isMobile = document.documentElement.classList.contains('is-mobile');
+
+    // Comum
     loadAOS();
     loadSwiper();
-    loadSwitchMenu();
     loadForm();
     attAge();
     loadCollapse();
+
+    // Condicional por dispositivo
+    if (isMobile) {
+        loadScrollMenu();
+        loadSwitchMenu();
+    } else {
+        loadTippy();
+    }
 });

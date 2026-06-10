@@ -406,8 +406,16 @@ textarea:focus {
     transition: all .2s ease-in-out, visibility 0.2s;
 }
 
-.navBarDesktop {
+.headerDesktop {
     display: none;
+}
+
+html.is-mobile .headerDesktop {
+    display: none !important;
+}
+
+html.is-desktop .headerMobile {
+    display: none !important;
 }
 
 
@@ -608,7 +616,11 @@ textarea:focus {
 }
 
 .collapse-header.collapsed .toggle-icon {
-    transform: rotate(-90deg);
+    transform: rotate(0deg);
+}
+
+.collapse-header:not(.collapsed) .toggle-icon {
+    transform: rotate(180deg);
 }
 
 .collapse-content {
@@ -737,8 +749,13 @@ textarea:focus {
     }
 
     /* header */
-    header {
+    .headerDesktop {
+        display: block;
         width: 5%;
+    }
+
+    .headerMobile {
+        display: none !important;
     }
 
     .navbarMobile {
