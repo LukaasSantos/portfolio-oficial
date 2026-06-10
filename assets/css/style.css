@@ -1,26 +1,29 @@
 :root {
-    --primary-100: #592DA1;
-    --primary-50: #8167AB;
-    --secundary-100: #8442ED;
-    --secundary-50: #DBD3E9;
-    --color-black: #444444;
-    --color-gray: #767676;
-    --color-white: #fff;
-    --color-wheat: #F0F0F6;
-    --dark-mode-primary: #262626;
-    --dark-mode-secundary: #373737;
-    --dark-mode-tertiary: #3E3E3E;
+    --primary-100: #6366F1;
+    --primary-50: #818CF8;
+    --secundary-100: #8B5CF6;
+    --secundary-50: #EEF2F6;
+    --color-black: #0F172A;
+    --color-gray: #64748B;
+    --color-white: #ffffff;
+    --color-wheat: #F1F5F9;
+    --dark-mode-primary: #0A0813;
+    --dark-mode-secundary: rgba(20, 18, 33, 0.45);
+    --dark-mode-tertiary: #121026;
 
-    
     --font-primary: 'Inter', sans-serif;
     --font-secundary: 'Lato', sans-serif;
     --font-tertiary: 'Roboto', sans-serif;
 
-    --tituloPrincipal-size: 1.5rem;
-    --subtituloPrincipal-size: 0.75rem;
-    --tituloCard-size: 1.25rem;
+    --tituloPrincipal-size: 1.75rem;
+    --subtituloPrincipal-size: 0.875rem;
+    --tituloCard-size: 1.35rem;
     --paragrafo-size: 1rem;
-    --subtitulo-color: light-dark(#6c757d, var(--color-wheat)); 
+    --subtitulo-color: light-dark(#64748B, #94A3B8); 
+
+    --glass-bg: light-dark(rgba(255, 255, 255, 0.45), rgba(20, 18, 33, 0.45));
+    --glass-border: light-dark(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.08));
+    --glass-shadow: light-dark(0 8px 32px 0 rgba(31, 38, 135, 0.06), 0 8px 32px 0 rgba(0, 0, 0, 0.37));
 }
 
 * {
@@ -268,20 +271,24 @@ textarea:focus {
 }
 
 .cardItem {
-    background-color: light-dark(var(--color-white), var(--dark-mode-secundary));
-    padding: 1rem;
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    padding: 1.5rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    border-radius: 16px;
+    box-shadow: var(--glass-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    /* https://smoothshadows.com/#djEsMSw1LDAuMDksMjcsMzIsMCwjMDMwNzEyLCMyNjI2MjYsIzM3MzczNywy */
-    box-shadow: 0px 1px 1px rgba(3, 7, 18, 0.02),
-    0px 5px 4px rgba(3, 7, 18, 0.04),
-    0px 12px 10px rgba(3, 7, 18, 0.05),
-    0px 20px 17px rgba(3, 7, 18, 0.07),
-    0px 32px 27px rgba(3, 7, 18, 0.09);
+.cardItem:hover {
+    transform: translateY(-4px);
+    box-shadow: light-dark(0 12px 40px 0 rgba(31, 38, 135, 0.1), 0 12px 40px 0 rgba(0, 0, 0, 0.5));
 }
 
 .colorPrimary {
@@ -312,17 +319,19 @@ textarea:focus {
     width: 95%;
     height: 3rem;
     padding-top: 20px;
-    padding-left: 10px;
-    border: 0px solid #6c757d;
+    padding-left: 15px;
+    border: 1px solid var(--glass-border);
     border-radius: 12px;
-    background-color: light-dark(var(--color-wheat), var(--color-black));
+    background: light-dark(rgba(241, 245, 249, 0.8), rgba(10, 9, 21, 0.6));
+    color: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .floating-label label {
     position: absolute;
     top: 12px;
     left: 20px;
-    color: #6c757d;
+    color: var(--color-gray);
     transition: all 0.3s;
     pointer-events: none;
 }
@@ -335,7 +344,13 @@ textarea:focus {
     top: 2px;
     left: 18px;
     font-size: 0.85em;
-    color: light-dark(var(--primary-100), var(--secundary-100));;
+    color: var(--primary-100);
+}
+
+.floating-label input:focus, .floating-label textarea:focus {
+    outline: none;
+    border-color: var(--primary-100);
+    box-shadow: 0 0 12px light-dark(rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.3));
 }
 
 
@@ -359,13 +374,11 @@ textarea:focus {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: light-dark(var(--color-white), var(--dark-mode-secundary));
-    color: light-dark(var(--color-black), var(--color-white));
-    background: light-dark(rgba( 255, 255, 255, 0.5 ),rgba(75, 75, 75, 0.5));
-    box-shadow: 0 8px 32px 0 rgba(55, 56, 69, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border: 1px solid light-dark(rgba( 255, 255, 255, 0.5 ),rgba(75, 75, 75, 0.5)); 
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
 }
 
 .ulMenuMobile {
@@ -373,23 +386,24 @@ textarea:focus {
     flex-direction: column;
     gap: 1rem;
     padding: 1rem;
-    background-color: light-dark(var(--color-white), var(--dark-mode-secundary));
-    color: light-dark(var(--primary-100), var(--color-white));
-    background: light-dark(rgba( 255, 255, 255, 0.5 ),rgba(75, 75, 75, 0.5));
-    box-shadow: 0 8px 32px 0 rgba(55, 56, 69, 0.37);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    border: 1px solid light-dark(rgba( 255, 255, 255, 0.5 ),rgba(75, 75, 75, 0.5));
-    transition: all .1s ease-in-out;
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    transition: all .2s ease-in-out;
     height: 250px;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .menuHidden {
     opacity: 0;
     height: 0;
     padding: 0;
-    /* display: none; */
-    transition: all .2s ease-in-out;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all .2s ease-in-out, visibility 0.2s;
 }
 
 .navBarDesktop {
@@ -401,8 +415,44 @@ textarea:focus {
 
 /* sessao principal */
 
+.sessaoPrincipal {
+    width: 100%;
+    scroll-margin-top: 100px;
+}
+
+.conteudoPrincipal {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    width: 100%;
+}
+
+.secoesDestaque {
+    margin-top: -2rem !important;
+    margin-left: -1rem;
+    margin-right: -1rem;
+}
+
 .divApresentacao {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2.5rem 1.5rem;
+    border-radius: 20px;
+    background: radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.12) 0%, transparent 70%),
+                radial-gradient(circle at 50% 100%, rgba(99, 102, 241, 0.12) 0%, transparent 70%),
+                light-dark(#ffffff, #0E0D1B);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--glass-shadow);
+    margin-bottom: 2rem;
+    gap: 1.5rem;
+}
+
+.divApresentacao img {
+    width: 250px !important;
+    height: 250px !important;
+    object-fit: contain;
 }
 
 
@@ -426,21 +476,37 @@ textarea:focus {
 
 /* meus projetos */
 
-.navSessoes {
+.portfolio-filters {
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     gap: 1rem;
-}  
-
-.navSessoes p {
-    width: 30%;
-    cursor: pointer;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
 }
 
-.navSessoes p:hover {
-    color: light-dark(var(--primary-100), var(--secundary-100));;
-    font-weight: bold;
+.filter-btn {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    color: inherit;
+    padding: 0.6rem 1.5rem;
+    border-radius: 50rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: var(--glass-shadow);
+}
+
+.filter-btn:hover {
+    background: var(--primary-100);
+    color: white;
+    border-color: var(--primary-100);
+}
+
+.filter-btn.active {
+    background: linear-gradient(90deg, var(--primary-100), var(--secundary-100));
+    color: white;
+    border-color: transparent;
+    box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
 }
 
 .divProjetos { 
@@ -456,6 +522,10 @@ textarea:focus {
 .cardProjetos {
     border-radius: 12px;
     padding: 10px;
+}
+
+.cardProjetos.hidden {
+    display: none !important;
 }
 
 .cardProjetos:hover {
@@ -613,15 +683,16 @@ textarea:focus {
 }
 
 .progress-bar-custom {
-    background-color: light-dark(var(--primary-100), var(--secundary-100)); 
+    background: linear-gradient(90deg, var(--primary-100) 0%, var(--secundary-100) 100%);
     border-radius: 50rem !important; 
 }
 
 .progress {
     flex-grow: 1;
-    height: 10px;
+    height: 8px;
     border-radius: 50rem;
-    background-color: #e9ecef; 
+    background-color: light-dark(#E2E8F0, #1E1B4B); 
+    overflow: hidden;
 }
 
 @media (min-width: 768px) {
@@ -682,22 +753,22 @@ textarea:focus {
         justify-content: space-between;
         align-items: center;
         width: 100%;
+        border-radius: 20px;
+        overflow: hidden;
+        background: radial-gradient(circle at 0% 0%, rgba(139, 92, 246, 0.12) 0%, transparent 60%),
+                    radial-gradient(circle at 100% 100%, rgba(99, 102, 241, 0.12) 0%, transparent 60%),
+                    light-dark(#ffffff, #0E0D1B);
+        border: 1px solid var(--glass-border);
+        box-shadow: var(--glass-shadow);
+    }
 
-        background: 
-        linear-gradient(135deg,#0000 20.5%, light-dark(var(--color-wheat), var(--dark-mode-secundary)) 0 29.5%,#0000 0) 0 50px,
-        linear-gradient( 45deg,#0000 8%, light-dark(var(--color-wheat), var(--dark-mode-secundary)) 0 17%, #0000 0 58%) 100px 0,
-        linear-gradient(135deg,#0000 8%, light-dark(var(--color-wheat), var(--dark-mode-secundary)) 0 17%, #0000 0 58%, light-dark(var(--color-wheat), var(--dark-mode-secundary)) 0 67%,#0000 0),        
-        linear-gradient( 45deg,#0000 8%, light-dark(var(--color-wheat), var(--dark-mode-secundary)) 0 17%, #0000 0 58%, light-dark(var(--color-wheat), var(--dark-mode-secundary)) 0 67%,#0000 0 83%, light-dark(var(--color-wheat), var(--dark-mode-secundary)) 0 92%,#0000 0),
-        light-dark(var(--primary-100), var(--secundary-100)); 
-        background-size: 200px 200px;
+    .divApresentacao img {
+        width: 350px !important;
+        height: 350px !important;
     }
 
     .divTriangulo {
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 400px 250px 0 0;
-        border-color: light-dark(var(--color-white), var(--dark-mode-secundary)) transparent transparent transparent;
+        display: none;
     }
 
     .divTitulosApresentacao {
@@ -709,13 +780,24 @@ textarea:focus {
         height: 400px;
     }
 
-    /* sessao principal */
+    /* sessao principal e wrapper de conteudo */
     .sessaoPrincipal {
+        width: 100%;
+        scroll-margin-top: 40px;
+    }
+
+    .conteudoPrincipal {
         display: flex;
         flex-direction: column;
-        gap: 2rem;
+        gap: 2.5rem;
         width: 70%;
         padding: 0 1rem;
+    }
+
+    .secoesDestaque {
+        margin-top: -2.5rem !important;
+        margin-left: -1rem;
+        margin-right: -1rem;
     }
 
     .divServicos {

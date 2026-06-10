@@ -1,75 +1,56 @@
 
 export function loadSwiper() {
+    const wrapper = document.querySelector('.swiper-wrapper');
+    if (!wrapper) return;
+
+    // Guardar cópia original dos slides
+    const originalSlides = Array.from(wrapper.querySelectorAll('.cardProjetos'));
+
     const swiper = new Swiper('.swiper', {
         effect: "coverflow",
         grabCursor: true,
         centeredSlides: true,
         slidesPerView: "auto",
         coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: true,
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
         },
-
         navigation: {
             nextEl: '.swiper-button-next',
             prevEl: '.swiper-button-prev',
         },
         pagination: {
-        el: ".swiper-pagination",
+            el: ".swiper-pagination",
         },
     });
 
-    const swiperCategEl = document.querySelector('.swiperCateg');
-    if (swiperCategEl) {
-        const swiperCategorias = new Swiper('.swiperCateg', {
-            centeredSlides: true,
-            slidesPerView: "auto",
-        });
-        swiperCategorias.on('slideChange', function (e) {
-            const slideAtual = e.slides[e.activeIndex] || 0;
-            trocaCategoria(slideAtual.id, e.activeIndex);
-        });
-    }
-    
-    function trocaCategoria(id, index) {
-        const projetos = document.querySelectorAll(".cardProjetos");
-        console.log(index);
-        
-        if (index == 0) {
-            projetos.forEach(projeto => {
-                projeto.classList.remove("hidden")
-            })
-        } else {
-            switch (id) {
-                case "categWeb":
-                    projetos.forEach(projeto => {
-                        projeto.classList.contains("categWeb") ? projeto.classList.remove("hidden") : projeto.classList.add("hidden");
-                    })
-                    
-                    break;
-                case "categMobile":
-                    projetos.forEach(projeto => {
-                        projeto.classList.contains("categMobile") ? projeto.classList.remove("hidden") : projeto.classList.add("hidden");
-                    })
-                    break;
-                case "categUI":
-                    projetos.forEach(projeto => {
-                        projeto.classList.contains("categUI") ? projeto.classList.remove("hidden") : projeto.classList.add("hidden");
-                    })
-                    break;
-            }
-        }
-        swiper.update();
-        requestAnimationFrame(() => {
-        // Um segundo requestAnimationFrame pode ser necessário em alguns navegadores/condições
-        // para garantir que o reflow completo ocorra
-        requestAnimationFrame(() => {
-            swiper.update(); // Recalcula o Swiper dos projetos
-            swiper.slideTo(0); // Opcional: Voltar ao primeiro slide após a filtragem
+    const filterBtns = document.querySelectorAll('.filter-btn');
+
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterBtns.forEach(b => b.classList.remove('active'));
+            // Add active class to clicked button
+            btn.classList.add('active');
+
+            const filter = btn.getAttribute('data-filter');
+
+            // Limpar wrapper do DOM
+            wrapper.innerHTML = '';
+
+            // Filtrar e re-adicionar apenas os slides correspondentes
+            originalSlides.forEach(slide => {
+                if (filter === 'all' || slide.classList.contains(filter)) {
+                    wrapper.appendChild(slide);
+                }
+            });
+
+            // Atualizar e resetar posição do Swiper com os novos slides do DOM
+            swiper.update();
+            swiper.slideTo(0, 0);
         });
     });
-    }
 }
