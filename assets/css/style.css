@@ -536,7 +536,6 @@ html.is-desktop .headerMobile {
 .swiper-slide {
     background-position: center;
     background-size: cover;
-    width: fit-content;
 }
 
 .cardProjetos {

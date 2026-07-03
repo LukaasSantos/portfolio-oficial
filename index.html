@@ -49,22 +49,39 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Lucas Santos",
-      "jobTitle": "Desenvolvedor Front-End & UX/UI Designer",
-      "description": "Desenvolvedor Front-End e UX/UI Designer especializado em React, Next.js e TypeScript",
-      "url": "https://lucassantos.dev",
-      "image": "https://lucassantos.dev/assets/img/perfil.jpg",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Osasco",
-        "addressRegion": "SP",
-        "addressCountry": "BR"
-      },
-      "sameAs": [
-        "https://github.com/LukaasSantos",
-        "https://www.linkedin.com/in/lucasgoncalvesdossantos",
-        "https://www.instagram.com/_luknhasz_"
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": "https://lucassantos.dev/#person",
+          "name": "Lucas Santos",
+          "jobTitle": "Desenvolvedor Front-End & UX/UI Designer",
+          "description": "Desenvolvedor Front-End e UX/UI Designer especializado em React, Next.js e TypeScript",
+          "url": "https://lucassantos.dev",
+          "image": "https://lucassantos.dev/assets/img/perfil.jpg",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Osasco",
+            "addressRegion": "SP",
+            "addressCountry": "BR"
+          },
+          "sameAs": [
+            "https://github.com/LukaasSantos",
+            "https://www.linkedin.com/in/lucasgoncalvesdossantos",
+            "https://www.instagram.com/_luknhasz_",
+            "https://dribbble.com/Luknhasz"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://lucassantos.dev/#website",
+          "url": "https://lucassantos.dev",
+          "name": "Lucas Santos | Desenvolvedor Front-End & UX/UI Designer",
+          "description": "Portfólio profissional de Lucas Santos, Desenvolvedor Front-End e UX/UI Designer.",
+          "publisher": {
+            "@id": "https://lucassantos.dev/#person"
+          },
+          "inLanguage": "pt-BR"
+        }
       ]
     }
     </script>
@@ -205,39 +222,13 @@
                     <div class="divTitulosApresentacao" style="box-shadow: 0px 0px 0px 0px;">
                         <h1 class="tituloPrincipalApresentacao bold" id="titulo-apresentacao">Eu sou o <span
                                 class="colorPrimary">Lucas Santos</span></h1>
-                        <h1 class="tituloPrincipalApresentacao bold"><span class="colorPrimary">Front-End</span> e <span
-                                class="colorPrimary">UX UI</span> Developer</h1>
+                        <h2 class="tituloPrincipalApresentacao bold"
+                            style="font-size: inherit; font-weight: inherit; margin: 0;"><span
+                                class="colorPrimary">Front-End</span> e <span class="colorPrimary">UX UI</span>
+                            Developer</h2>
                     </div>
                     <img loading="lazy" src="/assets/img/notion-face-transparent.png"
                         alt="Caricatura de Lucas Santos - Desenvolvedor Front-End" style="width: 350px; height: 350px;">
-                </div>
-            </section>
-
-            <!-- Meus Serviços -->
-            <section id="servicos" class="sessaoPrincipal" data-aos="zoom-in-up" aria-labelledby="titulo-servicos">
-                <div class="divTitulo">
-                    <h3 class="tituloPrincipal" id="titulo-servicos">Meus Serviços</h3>
-                    <p class="subtituloPrincipal colorSubtitulo">Os principais serviços que ofereço</p>
-                </div>
-                <div class="divServicos">
-                    <div class="cardItem cardWeb">
-                        <img loading="lazy" src="/assets/img/icons/coding-lightpurple.svg"
-                            alt="Ícone de desenvolvimento web" class="imgServicos imgWeb">
-                        <div class="divTitulo" style="padding: 1rem;">
-                            <h3 class="tituloPrincipal">Desenvolvimento Web</h3>
-                            <p class="subtituloPrincipal colorSubtitulo">e-commerce, Sistemas internos, Landing Pages,
-                                etc..</p>
-                        </div>
-                    </div>
-                    <div class="cardItem cardDesign">
-                        <img loading="lazy" src="/assets/img/icons/illustration-lightpurple.svg"
-                            alt="Ícone de design UI/UX" class="imgServicos imgDesign">
-                        <div class="divTitulo" style="padding: 1rem;">
-                            <h3 class="tituloPrincipal">UI/UX design</h3>
-                            <p class="subtituloPrincipal colorSubtitulo">Aplicativos Mobile, website design, Design
-                                Patterns e systems, etc..</p>
-                        </div>
-                    </div>
                 </div>
             </section>
 
@@ -337,6 +328,34 @@
                     <div class="swiper-button-prev colorSecundary"></div>
                     <div class="swiper-button-next colorSecundary"></div>
                 </div>
+            </section>
+
+            <!-- Meus Serviços -->
+            <section id="servicos" class="sessaoPrincipal" data-aos="zoom-in-up" aria-labelledby="titulo-servicos">
+                <div class="divTitulo">
+                    <h3 class="tituloPrincipal" id="titulo-servicos">Meus Serviços</h3>
+                    <p class="subtituloPrincipal colorSubtitulo">Os principais serviços que ofereço</p>
+                </div>
+                <div class="divServicos">
+                    <div class="cardItem cardWeb">
+                        <img loading="lazy" src="/assets/img/icons/coding-lightpurple.svg"
+                            alt="Ícone de desenvolvimento web" class="imgServicos imgWeb">
+                        <div class="divTitulo" style="padding: 1rem;">
+                            <h3 class="tituloPrincipal">Desenvolvimento Web</h3>
+                            <p class="subtituloPrincipal colorSubtitulo">e-commerce, Sistemas internos, Landing Pages,
+                                etc..</p>
+                        </div>
+                    </div>
+                    <div class="cardItem cardDesign">
+                        <img loading="lazy" src="/assets/img/icons/illustration-lightpurple.svg"
+                            alt="Ícone de design UI/UX" class="imgServicos imgDesign">
+                        <div class="divTitulo" style="padding: 1rem;">
+                            <h3 class="tituloPrincipal">UI/UX design</h3>
+                            <p class="subtituloPrincipal colorSubtitulo">Aplicativos Mobile, website design, Design
+                                Patterns e systems, etc..</p>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- div ondas -->
                 <div class="custom-shape-divider-bottom-1749230588">
@@ -354,6 +373,8 @@
                     </svg>
                 </div>
             </section>
+
+
 
             <!-- Seções destacadas de fundo (Experiência, Formação e Contato) -->
             <div class="secoesDestaque"
@@ -422,29 +443,29 @@
                 <div data-aos="zoom-in-up" class="divLogos">
                     <ul class="ulLogos">
                         <li><img loading="lazy" class="imgLogos" src="/assets/img/notion-face-transparent.png"
-                                alt="Logo tecnologia"></li>
+                                alt="Logo HTML5 - Tecnologia de Desenvolvimento Web"></li>
                         <li><img loading="lazy" class="imgLogos" src="/assets/img/notion-face-transparent.png"
-                                alt="Logo tecnologia"></li>
+                                alt="Logo CSS3 - Tecnologia de Estilização e Design Responsivo"></li>
                         <li><img loading="lazy" class="imgLogos" src="/assets/img/notion-face-transparent.png"
-                                alt="Logo tecnologia"></li>
+                                alt="Logo JavaScript (ES6+) - Linguagem de Programação Front-End"></li>
                         <li><img loading="lazy" class="imgLogos" src="/assets/img/notion-face-transparent.png"
-                                alt="Logo tecnologia"></li>
+                                alt="Logo TypeScript - Programação Web Escalável e Tipada"></li>
                         <li><img loading="lazy" class="imgLogos" src="/assets/img/notion-face-transparent.png"
-                                alt="Logo tecnologia"></li>
+                                alt="Logo React - Biblioteca Javascript para Interfaces Web"></li>
                         <li><img loading="lazy" class="imgLogos" src="/assets/img/notion-face-transparent.png"
-                                alt="Logo tecnologia"></li>
+                                alt="Logo Next.js - Framework Web para React com foco em SEO e Performance"></li>
                         <li><img loading="lazy" class="imgLogos" src="/assets/img/notion-face-transparent.png"
-                                alt="Logo tecnologia"></li>
+                                alt="Logo Vue.js - Framework Javascript Progressivo para Web"></li>
                         <li><img loading="lazy" class="imgLogos" src="/assets/img/notion-face-transparent.png"
-                                alt="Logo tecnologia"></li>
+                                alt="Logo PHP - Linguagem de Programação Back-End"></li>
                         <li><img loading="lazy" class="imgLogos" src="/assets/img/notion-face-transparent.png"
-                                alt="Logo tecnologia"></li>
+                                alt="Logo Laravel - Framework PHP para Sistemas Web Robustos"></li>
                         <li><img loading="lazy" class="imgLogos" src="/assets/img/notion-face-transparent.png"
-                                alt="Logo tecnologia"></li>
+                                alt="Logo Node.js - Ambiente de Execução Javascript para Back-End"></li>
                         <li><img loading="lazy" class="imgLogos" src="/assets/img/notion-face-transparent.png"
-                                alt="Logo tecnologia"></li>
+                                alt="Logo Figma - Ferramenta de Design de Interfaces UX/UI"></li>
                         <li><img loading="lazy" class="imgLogos" src="/assets/img/notion-face-transparent.png"
-                                alt="Logo tecnologia"></li>
+                                alt="Logo Tailwind CSS - Framework de Estilização Moderna"></li>
                     </ul>
                 </div>
 

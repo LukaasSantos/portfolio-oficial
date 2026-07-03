@@ -7,16 +7,13 @@ export function loadSwiper() {
     const originalSlides = Array.from(wrapper.querySelectorAll('.cardProjetos'));
 
     const swiper = new Swiper('.swiper', {
-        effect: "coverflow",
         grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: "auto",
-        coverflowEffect: {
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        breakpoints: {
+            768: {
+                slidesPerView: 2,
+            }
         },
         navigation: {
             nextEl: '.swiper-button-next',
