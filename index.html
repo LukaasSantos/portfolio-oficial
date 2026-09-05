@@ -703,25 +703,31 @@
                             <input type="hidden" name="access_key" value="b1a46f12-4553-4e63-ad95-18e5fb9e705a">
 
                             <div class="floating-label">
-                                <input type="text" id="nome" name="nome" placeholder="" required
+                                <input type="text" id="nome" name="nome" placeholder=" " required
                                     aria-describedby="nome-help">
                                 <label for="nome">Nome Completo</label>
                                 <span id="nome-help" class="sr-only">Digite seu nome completo</span>
                             </div>
                             <div class="floating-label">
-                                <input type="email" id="email" name="email" placeholder="" required
+                                <input type="email" id="email" name="email" placeholder=" " required
                                     aria-describedby="email-help">
                                 <label for="email">Email</label>
                                 <span id="email-help" class="sr-only">Digite seu email válido</span>
                             </div>
                             <div class="floating-label">
-                                <textarea id="mensagem" name="mensagem" placeholder=" " style="height: 10rem;" rows="12"
+                                <textarea id="mensagem" name="mensagem" placeholder=" " rows="5"
                                     aria-describedby="mensagem-help"></textarea>
                                 <label for="mensagem">Sua Mensagem</label>
                                 <span id="mensagem-help" class="sr-only">Digite sua mensagem aqui</span>
                             </div>
-                            <button id="btnEnviarForm" class="btnAcessar" type="submit"
-                                aria-label="Enviar formulário de contato">Enviar</button>
+                            <button id="btnEnviarForm" class="btnEnviarForm" type="submit"
+                                aria-label="Enviar formulário de contato">
+                                <span>Enviar Mensagem</span>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                            </button>
                         </fieldset>
                     </form>
                 </section>

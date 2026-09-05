@@ -327,54 +327,174 @@ textarea:focus {
     display: none;
 } */
 
+/* ================ Formulário de Contato ================ */
 .formContato {
     width: 100%;
+    max-width: 650px;
+    margin: 2rem auto 0 auto;
+    padding: 2.25rem 2rem;
+    box-sizing: border-box;
+    border-radius: 20px;
 }
 
-/* floating label */
+.formContato fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-sizing: border-box;
+}
+
+/* Floating Label Moderno */
 .floating-label {
-    width: 95%;
     position: relative;
-    margin: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .floating-label input,
 .floating-label textarea {
-    width: 95%;
-    height: 3rem;
-    padding-top: 20px;
-    padding-left: 15px;
-    border: 1px solid var(--glass-border);
-    border-radius: 12px;
-    background: light-dark(rgba(241, 245, 249, 0.8), rgba(10, 9, 21, 0.6));
-    color: inherit;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1.5px solid var(--glass-border);
+    border-radius: 14px;
+    background: light-dark(rgba(241, 245, 249, 0.6), rgba(15, 23, 42, 0.45));
+    color: light-dark(var(--color-black), var(--color-white));
+    font-size: 0.975rem;
+    font-family: inherit;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: light-dark(inset 0 2px 4px rgba(0, 0, 0, 0.02), inset 0 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+.floating-label input {
+    height: 3.5rem;
+    padding: 1.25rem 1rem 0.35rem 1rem;
+}
+
+.floating-label textarea {
+    min-height: 140px;
+    padding: 1.5rem 1rem 0.75rem 1rem;
+    resize: vertical;
 }
 
 .floating-label label {
     position: absolute;
-    top: 12px;
-    left: 20px;
-    color: var(--color-gray);
-    transition: all 0.3s;
+    top: 1rem;
+    left: 1rem;
+    color: var(--subtitulo-color);
+    font-size: 0.95rem;
+    font-weight: 400;
     pointer-events: none;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    background: transparent;
 }
 
-.floating-label input:focus~label,
-.floating-label input:not(:placeholder-shown)~label,
-.floating-label textarea:focus~label,
-.floating-label textarea:not(:placeholder-shown)~label {
-    top: 2px;
-    left: 18px;
-    font-size: 0.85em;
-    color: var(--primary-100);
+/* Estado Ativo/Focado do Label */
+.floating-label input:focus ~ label,
+.floating-label input:not(:placeholder-shown) ~ label,
+.floating-label textarea:focus ~ label,
+.floating-label textarea:not(:placeholder-shown) ~ label {
+    top: 0.35rem;
+    left: 1rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #5865F2;
 }
 
 .floating-label input:focus,
 .floating-label textarea:focus {
     outline: none;
-    border-color: var(--primary-100);
-    box-shadow: 0 0 12px light-dark(rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.3));
+    border-color: #5865F2;
+    background: light-dark(rgba(255, 255, 255, 0.95), rgba(20, 18, 33, 0.75));
+    box-shadow: 0 0 0 4px rgba(88, 101, 242, 0.18), 0 4px 16px rgba(88, 101, 242, 0.12);
+}
+
+/* Botão Enviar Formulário */
+.btnEnviarForm {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    background: linear-gradient(135deg, #5865F2 0%, #8B5CF6 100%);
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 0.95rem 1.75rem;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(88, 101, 242, 0.35);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin-top: 0.5rem;
+}
+
+.btnEnviarForm:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 22px rgba(88, 101, 242, 0.5);
+    filter: brightness(1.08);
+}
+
+.btnEnviarForm:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(88, 101, 242, 0.3);
+}
+
+.btnEnviarForm:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.btnEnviarForm svg {
+    transition: transform 0.3s ease;
+}
+
+.btnEnviarForm:hover svg {
+    transform: translateX(3px) translateY(-2px);
+}
+
+/* Toast Notifications */
+.form-toast {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    background: var(--glass-bg);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--glass-border);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    color: var(--color-white);
+    font-weight: 500;
+    z-index: 9999;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.form-toast.show {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.form-toast-success {
+    border-color: #10B981;
+    background: rgba(16, 185, 129, 0.2);
+    color: #34D399;
+}
+
+.form-toast-error {
+    border-color: #EF4444;
+    background: rgba(239, 68, 68, 0.2);
+    color: #F87171;
 }
 
 
@@ -1110,8 +1230,9 @@ textarea:focus {
     /* contato */
 
     .formContato {
-        width: 75%;
-        margin: 20px auto;
+        width: 100%;
+        max-width: 650px;
+        margin: 2.5rem auto 1rem auto;
     }
 
 
