@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
     <url>
-        <loc>https://lucassantos.dev/</loc>
-        <lastmod>2026-09-04</lastmod>
+        <loc>https://lucassssantos-dev.vercel.app/</loc>
+        <lastmod>2026-09-05</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
         <image:image>
-            <image:loc>https://lucassantos.dev/assets/img/notion-face-transparent.png</image:loc>
+            <image:loc>https://lucassssantos-dev.vercel.app/assets/img/og-image.png</image:loc>
             <image:title>Lucas Santos - Desenvolvedor Front-End e UX/UI Designer</image:title>
             <image:caption>Foto de perfil e identidade visual de Lucas Santos</image:caption>
         </image:image>
         <image:image>
-            <image:loc>https://lucassantos.dev/assets/img/perfil.jpg</image:loc>
+            <image:loc>https://lucassssantos-dev.vercel.app/assets/img/perfil.jpg</image:loc>
             <image:title>Lucas Santos</image:title>
         </image:image>
     </url>
