@@ -84,28 +84,7 @@ strong {
 
 
 
-/* wave */
-.custom-shape-divider-bottom-1749230588 {
-    /* position: absolute; */
-    bottom: 0;
-    margin-bottom: -1rem;
-    margin-left: -1rem;
-    width: calc(100% + 2rem);
-    overflow: hidden;
-    line-height: 0;
-    transform: rotate(180deg);
-}
 
-.custom-shape-divider-bottom-1749230588 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 150px;
-}
-
-.custom-shape-divider-bottom-1749230588 .shape-fill {
-    fill: light-dark(var(--color-wheat), var(--dark-mode-tertiary));
-}
 
 /* scrollbar */
 
@@ -592,9 +571,9 @@ textarea:focus {
 }
 
 .secoesDestaque {
-    margin-top: -2rem !important;
-    margin-left: -1rem;
-    margin-right: -1rem;
+    margin-top: 3.5rem !important;
+    margin-bottom: 2rem;
+    border-radius: 24px;
 }
 
 .divApresentacao {
@@ -1128,9 +1107,8 @@ textarea:focus {
     }
 
     .secoesDestaque {
-        margin-top: -2.5rem !important;
-        margin-left: -1rem;
-        margin-right: -1rem;
+        margin-top: 4.5rem !important;
+        margin-bottom: 3rem;
     }
 
     .divServicos {
