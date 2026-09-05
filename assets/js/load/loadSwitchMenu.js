@@ -1,19 +1,18 @@
 export function loadSwitchMenu() {
     const btnMenu = document.getElementById('btnMenu');
     const ulMenuMobile = document.querySelector('.ulMenuMobile');
+    if (!btnMenu || !ulMenuMobile) return;
+
     btnMenu.addEventListener('click', () => {
-        ulMenuMobile.classList.toggle('menuHidden');
+        const isHidden = ulMenuMobile.classList.toggle('menuHidden');
+        btnMenu.setAttribute('aria-expanded', !isHidden);
+    });
 
-    })
-
-    ulMenuMobile.childNodes.forEach((li) => {
-        li.addEventListener('click', () => {
-            if (ulMenuMobile.classList.contains('menuHidden')) {
-                
-            } else {
-                ulMenuMobile.classList.toggle('menuHidden');
-
-            }
-        })
-    })
+    const menuLinks = ulMenuMobile.querySelectorAll('a');
+    menuLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+            ulMenuMobile.classList.add('menuHidden');
+            btnMenu.setAttribute('aria-expanded', 'false');
+        });
+    });
 }
