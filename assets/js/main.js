@@ -8,12 +8,20 @@ import { attAge } from '/assets/js/functions/attAge.js';
 import { loadCollapse } from '/assets/js/load/loadCollapse.js';
 
 document.addEventListener('DOMContentLoaded', function() {
-    loadAOS();
-    loadCarousel();
-    loadForm();
-    attAge();
-    loadCollapse();
-    loadScrollMenu();
-    loadSwitchMenu();
-    loadTippy();
+    const safeExec = (fn, name) => {
+        try {
+            fn();
+        } catch (err) {
+            console.warn(`Erro ao carregar ${name}:`, err);
+        }
+    };
+
+    safeExec(loadAOS, 'AOS');
+    safeExec(loadCarousel, 'Carousel');
+    safeExec(loadForm, 'Form');
+    safeExec(attAge, 'attAge');
+    safeExec(loadCollapse, 'Collapse');
+    safeExec(loadScrollMenu, 'ScrollMenu');
+    safeExec(loadSwitchMenu, 'SwitchMenu');
+    safeExec(loadTippy, 'Tippy');
 });

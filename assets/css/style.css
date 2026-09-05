@@ -30,6 +30,22 @@
     font-family: var(--font-primary);
 }
 
+/* AOS Fallback de Segurança */
+html.aos-fallback [data-aos],
+html:not(.aos-initialized) [data-aos] {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+}
+
+html.aos-initialized [data-aos] {
+    opacity: 0;
+}
+
+html.aos-initialized [data-aos].aos-animate {
+    opacity: 1;
+}
+
 body {
     scroll-behavior: smooth;
     box-sizing: content-box;
